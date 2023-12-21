@@ -1,0 +1,12 @@
+﻿{
+  "QuickBooksAuthTokens": {
+    "ClientId": "ABcbwY3tWCZC4BN2JTR7nWVhHCfSfTaVsXyGM70BJxtsMDrPfW",
+    "ClientSecret": "WYW2Gb4M21WyliC04dzqaJKz1uOnoN1i7UKmhWPW",
+    "RedirectUrl": "https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl",
+    "AccessToken": null,
+    "RefreshToken": null,
+    "RealmId": null,
+    "Environment":  "sandbox"
+  }
+} 
+
