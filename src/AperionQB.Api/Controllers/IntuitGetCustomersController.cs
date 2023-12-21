@@ -9,20 +9,19 @@ namespace AperionPSD.Server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class RefreshTokenCallbackController : ControllerBase
+public class IntuitGetCustomersController : ControllerBase
 {
     private readonly IMediator _mediator;
 
-    public RefreshTokenCallbackController(IMediator mediator)
+    public IntuitGetCustomersController(IMediator mediator)
     {
         _mediator = mediator;
     }
 
     [HttpGet]
-    public async Task<ActionResult> RefreshTokenCallback([FromQuery] string code, [FromQuery] string state, [FromQuery] string realmId)
-    { 
-        Console.WriteLine("Callback Controller Response:\n Code: " + code + "\nState: " + state + "\nRealm ID: " + realmId);
-        await QuickBooksFetchNewKeys.GetAuthTokensAsync(code, realmId);
+    public async Task<ActionResult> IntuitGetCustomers()
+    {
+        
         return Ok("Fetched New Keys");
 
     }

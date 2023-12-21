@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using AperionQB.Infrastructure.QuickBooks;
 using Intuit.Ipp.OAuth2PlatformClient;
 using System.Diagnostics;
+using System.Text.Encodings.Web;
+using System.Reflection;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -19,17 +21,17 @@ public class RefreshTokenController : ControllerBase
     public RefreshTokenController(IMediator mediator)
     {
         _mediator = mediator;
-        Serilog.Log.Logger = new Serilog.LoggerConfiguration().CreateLogger();
     }
 
 
     [HttpGet]
-    public async Task<ActionResult> RefreshToken()
+    public IActionResult RefreshToken()
     {
         OAuth2Client Client =  QuickBooksFetchNewKeys.Initialize();
-        Redirect(QuickBooksFetchNewKeys.GetAuthorizationURL(Client, OidcScopes.Accounting));
+        string authorizeUrl = QuickBooksFetchNewKeys.GetAuthorizationURL(Client, OidcScopes.Accounting);
+        Console.WriteLine(authorizeUrl);
+        return Redirect(authorizeUrl);
 
-        return Ok("Fetched New Keys");
 
     }
 
