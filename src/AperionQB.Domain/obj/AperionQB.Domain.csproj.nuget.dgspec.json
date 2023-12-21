@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {}
+    "C:\\Users\\PatrickHicks\\Projects\\aperion-quickbooks-integration\\src\\AperionQB.Domain\\AperionQB.Domain.csproj": {}
   },
   "projects": {
-    "/Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+    "C:\\Users\\PatrickHicks\\Projects\\aperion-quickbooks-integration\\src\\AperionQB.Domain\\AperionQB.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PatrickHicks\\Projects\\aperion-quickbooks-integration\\src\\AperionQB.Domain\\AperionQB.Domain.csproj",
         "projectName": "AperionQB.Domain",
-        "projectPath": "/Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
-        "packagesPath": "/Users/patrickhicks/.nuget/packages/",
-        "outputPath": "/Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/obj/",
+        "projectPath": "C:\\Users\\PatrickHicks\\Projects\\aperion-quickbooks-integration\\src\\AperionQB.Domain\\AperionQB.Domain.csproj",
+        "packagesPath": "C:\\Users\\PatrickHicks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PatrickHicks\\Projects\\aperion-quickbooks-integration\\src\\AperionQB.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/patrickhicks/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\PatrickHicks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

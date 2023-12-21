@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AperionQB.Domain
-build_property.ProjectDir = /Users/patrickhicks/Documents/Projects/aperion-quickbooks-integration/src/AperionQB.Domain/
+build_property.ProjectDir = C:\Users\PatrickHicks\Projects\aperion-quickbooks-integration\src\AperionQB.Domain\
