@@ -8,6 +8,7 @@ using Intuit.Ipp.OAuth2PlatformClient;
 using System.Diagnostics;
 using System.Text.Encodings.Web;
 using System.Reflection;
+using AperionQB.Domain.Entities.QuickBooks;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -27,13 +28,13 @@ public class RefreshTokenController : ControllerBase
     [HttpGet]
     public IActionResult RefreshToken()
     {
-        OAuth2Client Client =  QuickBooksFetchNewKeys.Initialize();
-        string authorizeUrl = QuickBooksFetchNewKeys.GetAuthorizationURL(Client, OidcScopes.Accounting);
-        Console.WriteLine(authorizeUrl);
+        OAuth2Client Client = QuickBooksKeyActions.Initialize();
+        QuickBooksKeyActions.setClient(Client);
+
+        IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
+       
+        string authorizeUrl = QuickBooksKeyActions.GetAuthorizationURL(OidcScopes.Accounting);
         return Redirect(authorizeUrl);
-
-
+        
     }
-
-
 }

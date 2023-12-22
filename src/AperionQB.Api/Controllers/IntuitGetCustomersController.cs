@@ -21,8 +21,8 @@ public class IntuitGetCustomersController : ControllerBase
     [HttpGet]
     public async Task<ActionResult> IntuitGetCustomers()
     {
-        
-        return Ok("Fetched New Keys");
+        GetAllCustomers.getCustomersFromIntuit();
+        return Ok("Got all customers from Intuit");
 
     }
 }
