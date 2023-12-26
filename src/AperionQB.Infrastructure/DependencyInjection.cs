@@ -1,6 +1,7 @@
 ﻿using System;
 using AperionQB.Application.Interfaces;
 using AperionQB.Infrastructure.Data;
+using AperionQB.Infrastructure.QuickBooks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +24,8 @@ namespace AperionQB.Infrastructure
                             .LogTo(Console.WriteLine, LogLevel.Information)
                             .EnableSensitiveDataLogging()
                             .EnableDetailedErrors());
+
+            services.AddSingleton<IQuickBooksManager, QuickBooksManager>();
 
             
             return services;

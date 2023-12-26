@@ -4,6 +4,7 @@ using AperionQB.Application.Features.Invoices.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AperionQB.Infrastructure.QuickBooks;
+using AperionQB.Application.Features.QuickBooks.Commands;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -21,7 +22,14 @@ public class RefreshTokenCallbackController : ControllerBase
     [HttpGet]
     public async Task<ActionResult> RefreshTokenCallback([FromQuery] string code, [FromQuery] string state, [FromQuery] string realmId)
     {
-        await QuickBooksKeyActions.GetAuthTokensAsync(code, realmId);
+        try
+        {
+            await _mediator.Send(new CommandGetKeysCallback(code, state,realmId));
+        }catch (Exception e)
+        {
+            return BadRequest("Error has occured: " + e.Message + "\n" + e.ToString());
+        }
+        
         return Ok("Fetched New Keys");
 
     }

@@ -24,4 +24,14 @@
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
     <PackageReference Include="SerilogTraceListener" Version="3.2.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="QuickBooks\TokenManagement\" />
+    <None Remove="QuickBooks\Customer\" />
+    <None Remove="QuickBooks\Payments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QuickBooks\TokenManagement\" />
+    <Folder Include="QuickBooks\Customer\" />
+    <Folder Include="QuickBooks\Payments\" />
+  </ItemGroup>
 </Project>

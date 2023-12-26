@@ -10,24 +10,22 @@ using Newtonsoft.Json;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
-	public class QuickBooksKeyActions
+	public class QuickBooksKeyActions : QuickBooksOperation
 	{
-        public static OAuth2Client? Client { get; set; } = null;
+        OAuth2Client Client;
 
-
-
-        public static OAuth2Client Initialize()
+        public OAuth2Client Initialize()
         {
             IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
             return new(info.ClientId, info.ClientSecret, info.RedirectUrl, (string)info.Env);
         }
 
-        public static void setClient(OAuth2Client client)
+        public void setClient(OAuth2Client client)
         {
-            Client = client; 
+            Client = client;
         }
 
-        public static string GetAuthorizationURL(params OidcScopes[] scopes)
+        public string GetAuthorizationURL(params OidcScopes[] scopes)
         {
             
  
@@ -41,9 +39,10 @@ namespace AperionQB.Infrastructure.QuickBooks
             return result;
         }
 
-        public static async Task GetAuthTokensAsync(string code, string realmId)
+        public async Task GetAuthTokensAsync(string code, string realmId)
         {
-
+            Console.WriteLine("Code: " + code + "\nRealm: " + realmId);
+            Client = this.Initialize();
             TokenResponse response = await Client.GetBearerTokenAsync(code);
             var access_token = response.AccessToken;
             var refresh_token = response.RefreshToken;
@@ -51,12 +50,21 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         }
 
-        public static async Task refreshAccessTokens()
+        public async Task<bool> refreshAccessTokens()
         {
-            IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
-            TokenResponse response = await Client.RefreshTokenAsync((string)info.RefreshToken);
-            IntuitInfoHandler.UpdateTokens(response.AccessToken, response.RefreshToken, (string)info.RealmId);
-            
+            Client = this.Initialize();
+            try
+            {
+                IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
+                TokenResponse response = await Client.RefreshTokenAsync((string)info.RefreshToken);
+                IntuitInfoHandler.UpdateTokens(response.AccessToken, response.RefreshToken, (string)info.RealmId);
+            }catch (Exception e)
+            {
+                Console.WriteLine(e.Message + "\n" + e.ToString());
+                return false;
+            }
+
+            return true;
         }
 	}
 }

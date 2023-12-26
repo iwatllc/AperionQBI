@@ -4,6 +4,7 @@ using AperionQB.Application.Features.Invoices.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AperionQB.Infrastructure.QuickBooks;
+using AperionQB.Application.Features.QuickBooks.Commands;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -21,8 +22,15 @@ public class RefreshAccessToken : ControllerBase
     [HttpGet]
     public async Task<ActionResult> RefreshAccessTokens()
     {
-        QuickBooksKeyActions.refreshAccessTokens();
-        return Ok("Access Tokens Refreshed Successfully");
+        bool response = _mediator.Send(new CommandRefreshAccessTokens()).Result;
+        if (response)
+        {
+            return Ok("Successfully refreshed access tokens!");
+        }
+        else
+        {
+            return BadRequest("An error occured. Check logs and try again");
+        }
 
     }
 }

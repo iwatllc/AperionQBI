@@ -4,6 +4,7 @@ using AperionQB.Application.Features.Invoices.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AperionQB.Infrastructure.QuickBooks;
+using AperionQB.Application.Features.QuickBooks.Commands;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -19,10 +20,16 @@ public class IntuitGetCustomersController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult> IntuitGetCustomers()
+    public async Task<IActionResult> IntuitGetCustomers()
     {
-        GetAllCustomers.getCustomersFromIntuit();
-        return Ok("Got all customers from Intuit");
-
+        bool result = _mediator.Send(new CommandGetCustomers()).Result;
+        if (result)
+        {
+            return Ok("Got all customers from Intuit");
+        }
+        else
+        {
+            return BadRequest("Unable to get customers from intuit. Please check logs and fix the issued");
+        }
     }
 }

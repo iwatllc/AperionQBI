@@ -12,8 +12,8 @@ namespace AperionQB.Infrastructure.QuickBooks
 	public abstract class QuickBooksOperation
 	{
 
-        OAuth2RequestValidator validator;
-        ServiceContext serviceContext; 
+        public OAuth2RequestValidator validator { get;  }
+        public ServiceContext serviceContext { get;  }
 
 	    public QuickBooksOperation()
 	    {

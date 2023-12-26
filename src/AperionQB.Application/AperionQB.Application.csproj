@@ -17,8 +17,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Features\Invoices\Commands\" />
+    <None Remove="Features\QuickBooks\" />
+    <None Remove="Features\QuickBooks\Commands\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Invoices\Commands\" />
+    <Folder Include="Features\QuickBooks\" />
+    <Folder Include="Features\QuickBooks\Commands\" />
   </ItemGroup>
 </Project>

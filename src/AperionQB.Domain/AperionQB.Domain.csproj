@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\QuickBooks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\QuickBooks\" />
+  </ItemGroup>
 </Project>

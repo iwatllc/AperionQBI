@@ -9,22 +9,12 @@ using Newtonsoft.Json;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
-    public class GetAllCustomers
+    public class GetAllCustomers : QuickBooksOperation
     {
-        public static void getCustomersFromIntuit()
+        public void getCustomersFromIntuit()
         {
 
-            IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
-            string realmId = (string)info.RealmId;
-
-            OAuth2RequestValidator oauthValidator = new OAuth2RequestValidator((string)info.AccessToken);
-            // Create a ServiceContext with Auth tokens and realmId
-            ServiceContext serviceContext = new ServiceContext(realmId, IntuitServicesType.QBO, oauthValidator);
-            serviceContext.IppConfiguration.BaseUrl.Qbo = "https://sandbox-quickbooks.api.intuit.com/";
-            serviceContext.IppConfiguration.MinorVersion.Qbo = "23";
-
-            // Create a QuickBooks QueryService using ServiceContext
-            QueryService<Customer> querySvc = new QueryService<Customer>(serviceContext);
+            QueryService<Customer> querySvc = new QueryService<Customer>(base.serviceContext);
             double numCustomers = (double)querySvc.ExecuteIdsQueryForCount("SELECT count(*) FROM Customer");
 
             StreamWriter customerCSV = new StreamWriter("Customers.CSV");
@@ -35,24 +25,19 @@ namespace AperionQB.Infrastructure.QuickBooks
                 if (i == 0)
                 {
                     companyInfo = querySvc.ExecuteIdsQuery($"SELECT * FROM Customer MAXRESULTS 10");
-
                 }
                 else
                 {
                     companyInfo = querySvc.ExecuteIdsQuery($"SELECT * FROM Customer STARTPOSITION {(10 * i) + 1} MAXRESULTS 10");
                 }
 
-
                 Customer[] customers = companyInfo.ToArray<Customer>();
-                Console.WriteLine(customers.Length);
                 foreach (Customer customer in customers)
                 {
                     customerCSV.WriteLine($"{customer.Id},{customer.CompanyName},\"{customer.BillAddr?.Line1} {customer.BillAddr?.City}\",{customer.DisplayName},\"{customer.FamilyName},{customer.GivenName}\", {customer.PrimaryEmailAddr?.Address},");
                 }
             }
-
             customerCSV.Close();
-            
         }
     }
 }
