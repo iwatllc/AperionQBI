@@ -14,7 +14,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
         }
 
 
-        public bool addAllPaymentstoQuickBooks()
+        public async Task<bool> addAllPaymentstoQuickBooks()
 		{
             var payments = _context.PaymentsToMigrateToIntuit.ToList().Where(((pmnt) => (pmnt.intuitPaymentID == null)));
             AddPayment addPayment = new AddPayment();
@@ -22,11 +22,21 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
             foreach (QBPayments payment in payments)
             {
-                Console.WriteLine("Found: ID: " + payment.id + " BZB Customer ID: " + payment.BZBCustomerID + " Payment Amount: " + payment.PaymentAmount + " Memo: " + payment.Memo);
-                QBCustomerMapping mapping = _context.BZBQuickBooksCustomerMappings.Where((map) => (map.bzbId == payment.BZBCustomerID)).First();
+                Console.WriteLine(DateTime.UtcNow + ": Found ID: " + payment.id + " BZB Customer ID: " + payment.BZBCustomerID + " Payment Amount: " + payment.totalAmount + " Memo: " + payment.Memo);
+                QBCustomerMapping mapping = null;
+                try
+                {
+                     mapping = _context.BZBQuickBooksCustomerMappings.Where((map) => (map.bzbId == payment.BZBCustomerID)).First();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(DateTime.UtcNow + ": Could not find customer mapping for BZB Customer ID: " + payment.BZBCustomerID + ". Skipping...");
+                }
+
+
                 if (mapping != null)
                 {
-                    int result = addPayment.addPayment(payment.PaymentAmount, mapping.qbId, payment.Memo, payment.Memo);
+                    int result = addPayment.addPayment(payment.totalAmount, mapping.qbId, payment.Memo, payment.Memo);
 
                     if (result == -1)
                     {
@@ -37,13 +47,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
 
                     _context.PaymentsToMigrateToIntuit.Update(payment);
-                    _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                 }
-                else
-                {
-                    Console.WriteLine("Could not find a customer mapping for BZB Customer with ID: " + payment.BZBCustomerID);
-                }
-
             }
 
             return true;

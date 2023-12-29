@@ -5,7 +5,7 @@ namespace AperionQB.Domain.Entities.BZBQB
     {
         public int id { get; set; }
         public int BZBCustomerID { get; set; }
-        public decimal PaymentAmount { get; set; }
+        public decimal totalAmount { get; set; }
         public string? Memo { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool DeletedBool { get; set; }

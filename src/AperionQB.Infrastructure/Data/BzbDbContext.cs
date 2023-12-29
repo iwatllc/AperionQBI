@@ -1670,7 +1670,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.HasKey(e => e.id).HasName("PRIMARY");
 
             entity
-                .ToTable("BZBQuickBooksCustomerMapping")
+                .ToTable("QBCustomerMapping")
                 .HasCharSet("utf8mb3")
                 .UseCollation("utf8mb3_general_ci");
 
@@ -1686,13 +1686,13 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.HasKey(e => e.id).HasName("PRIMARY");
 
             entity
-                .ToTable("PaymentsToMigrateToIntuit")
+                .ToTable("QBPayments")
                 .HasCharSet("utf8mb3")
                 .UseCollation("utf8mb3_general_ci");
 
             entity.Property(e => e.id).HasColumnName("id");
             entity.Property(e => e.BZBCustomerID).HasColumnName("BZBCustomerID");
-            entity.Property(e => e.PaymentAmount).HasColumnName("PaymentAmount").HasPrecision(10,2);
+            entity.Property(e => e.totalAmount).HasColumnName("totalAmount").HasPrecision(10,2);
             entity.Property(e => e.Memo).HasColumnName("Memo").HasColumnType("Text");
             entity.Property(e => e.CreatedDate).HasColumnName("CreatedDate").HasColumnType("datetime");
             entity.Property(e => e.DeletedBool).HasColumnName("DeletedBool");
@@ -1707,13 +1707,13 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.HasKey(e => e.id).HasName("primary");
 
             entity
-                .ToTable("PaymentsToMigrateToIntuit")
+                .ToTable("QBUpdateTransactions")
                 .HasCharSet("utf8mb3")
                 .UseCollation("utf8mb3_general_ci");
 
             entity.Property(e => e.id).HasColumnName("id");
             entity.Property(e => e.QBPaymentsID).HasColumnName("QBPaymentsID");
-            entity.Property(e => e.updateBool).HasColumnName("updateBool");
+            entity.Property(e => e.updateBool).HasColumnName("updateBoolean");
             entity.Property(e => e.updatedDate).HasColumnName("updatedDate").HasColumnType("datetime");
             entity.Property(e => e.updatedUser).HasColumnName("updatedUser").HasColumnType("Text");
             entity.Property(e => e.datePosted).HasColumnName("datePosted").HasColumnType("datetime");

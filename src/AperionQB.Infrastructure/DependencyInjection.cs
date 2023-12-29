@@ -16,17 +16,18 @@ namespace AperionQB.Infrastructure
 	{
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+
             // Setting up data/DB
             string connStr = configuration.GetConnectionString("DefaultConnection") ?? "";
 
             services.AddDbContext<IApplicationDbContext, BzbDbContext>(dbContextOptions => dbContextOptions
                             .UseMySql(connStr, ServerVersion.Parse("8.1.0-mysql"))
-                            .UseLazyLoadingProxies()
+                            .UseLazyLoadingProxies());
                             // The following three options help with debugging, but should
                             // be changed or removed for production.
-                            .LogTo(Console.WriteLine, LogLevel.Information)
-                            .EnableSensitiveDataLogging()
-                            .EnableDetailedErrors());
+                            //.LogTo(Console.WriteLine, LogLevel.Information)
+                            //.EnableSensitiveDataLogging()
+                            //.EnableDetailedErrors());
 
             services.AddSingleton<IQuickBooksManager, QuickBooksManager>();
 
@@ -42,10 +43,12 @@ namespace AperionQB.Infrastructure
                 options.WaitForJobsToComplete = true;
             });
 
-            
+
             //Runs the setup for each job being scheduled
             services.ConfigureOptions<CheckDBForNewPaymentsSetup>();
             services.ConfigureOptions<UpdateAccessTokensSetup>();
+            services.ConfigureOptions<CheckDBForPaymentUpdatesSetup>();
+            services.ConfigureOptions<CheckDBForPaymentDeletionsSetup>();
 
             services.AddQuartzHostedService();
 

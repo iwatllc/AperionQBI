@@ -5,8 +5,8 @@ namespace AperionQB.Application.Features.QuickBooks.Commands
     public class QBPayment
     {
         public decimal id { get; }
-        public decimal totalAmount { get; }
-        public string privateNote { get; }
+        public decimal totalAmount { get; set; }
+        public string privateNote { get; set; }
         public decimal balance { get; }
 
         public QBPayment(int id, decimal totalAmt, string pNote, decimal bal)

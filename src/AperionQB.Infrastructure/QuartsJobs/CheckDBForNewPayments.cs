@@ -24,23 +24,23 @@ namespace AperionQB.Infrastructure
         {
             try
             {
-                Console.WriteLine(DateTime.UtcNow + ": Checking for new payments in bzb");
-                int count = _context.PaymentsToMigrateToIntuit.ToList().Where((pmnt) => (pmnt.intuitPaymentID == null)).Count();
+                Console.WriteLine(DateTime.Now + ": Checking for new payments in bzb");
+                int count = _context.PaymentsToMigrateToIntuit.ToList().Where((pmnt) => (pmnt.intuitPaymentID == null && pmnt.DeletedBool == false)).Count();
                 if (count > 0)
                 {
-                    Console.WriteLine(DateTime.UtcNow + ": Found " + count + " new payments to process");
-                    bool result = new AddAllPaymentsToQuickBooks(_context).addAllPaymentstoQuickBooks();
+                    Console.WriteLine(DateTime.Now + ": Found " + count + " new payments to process");
+                    bool result = new AddAllPaymentsToQuickBooks(_context).addAllPaymentstoQuickBooks().Result;
 
                 }
                 else
                 {
-                    Console.WriteLine(DateTime.UtcNow + ": No new payments to process");
+                    Console.WriteLine(DateTime.Now + ": No new payments to process");
                 }
 
                 return Task.CompletedTask;
             }catch (Exception e)
             {
-                Console.WriteLine(DateTime.UtcNow + ": An error occured during job execution(CheckDBForNewPayments): " + e.Message + "\n" + e.StackTrace);
+                Console.WriteLine(DateTime.Now + ": An error occured during job execution(CheckDBForNewPayments): " + e.Message + "\n" + e.StackTrace);
                 return Task.CompletedTask;
             }
 
@@ -56,9 +56,9 @@ namespace AperionQB.Infrastructure
                 .AddJob<CheckDBForNewPayments>(jobBuilder => jobBuilder.WithIdentity(jobKey))
                 .AddTrigger(trigger => trigger
                     .ForJob(jobKey)
-                    //.StartAt(new DateTimeOffset().AddSeconds(10))
+                    .StartAt(DateTimeOffset.Now.AddMinutes(1))
                     .WithSimpleSchedule(schedule =>
-                        schedule.WithIntervalInMinutes(5).RepeatForever()));
+                        schedule.WithIntervalInMinutes(30).RepeatForever()));
         }
     }
 }

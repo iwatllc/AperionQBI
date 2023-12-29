@@ -7,14 +7,13 @@ using AperionQB.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 
-
 // Add Serilog Logging
 builder.Host.UseSerilog((context, config) =>
 {
     config.MinimumLevel.Error();
     config.WriteTo.Console();
     config.WriteTo.Debug();
-    config.WriteTo.File("logs/myapp.log", rollingInterval: RollingInterval.Day);
+    config.WriteTo.File("logs/QuibbyLogs.log", rollingInterval: RollingInterval.Day);
 });
 
 // Add services to the container

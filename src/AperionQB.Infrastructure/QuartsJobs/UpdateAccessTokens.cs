@@ -22,20 +22,20 @@ namespace AperionQB.Infrastructure.QuartsJobs
         {
             try
             {
-                Console.WriteLine(DateTime.UtcNow + ": About to update access tokens");
+                Console.WriteLine(DateTime.Now + ": About to update access tokens");
                 QuickBooksKeyActions actions = new QuickBooksKeyActions();
                 bool result = actions.refreshAccessTokens().Result;
                 if (result)
                 {
-                    Console.WriteLine(DateTime.UtcNow + ": Successfully updated access tokens");
+                    Console.WriteLine(DateTime.Now + ": Successfully updated access tokens");
                 }
                 else
                 {
-                    Console.WriteLine(DateTime.UtcNow + ": An error occured while updating access tokens");
+                    Console.WriteLine(DateTime.Now + ": An error occured while updating access tokens");
                 }
             }catch (Exception e)
             {
-                Console.WriteLine(DateTime.UtcNow + e.Message);
+                Console.WriteLine(DateTime.Now + e.Message);
             }
             return Task.CompletedTask;
 
@@ -51,7 +51,7 @@ namespace AperionQB.Infrastructure.QuartsJobs
                     .AddTrigger(trigger => trigger
                         .ForJob(jobKey)
                         .WithSimpleSchedule(schedule =>
-                            schedule.WithIntervalInMinutes(20).RepeatForever()));
+                            schedule.WithIntervalInMinutes(30).RepeatForever()));
             }
         }
     }

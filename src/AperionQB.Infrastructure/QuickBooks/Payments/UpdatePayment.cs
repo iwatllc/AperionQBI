@@ -23,6 +23,9 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
             receiptToUpdate.Balance = payment.balance;
             receiptToUpdate.BalanceSpecified = true;
 
+            receiptToUpdate.Line.ElementAt(0).Amount = payment.totalAmount;
+            receiptToUpdate.Line.ElementAt(0).AmountSpecified = true;
+
 
 
             DataService dService = new DataService(serviceContext);
