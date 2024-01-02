@@ -1,6 +1,7 @@
 ﻿using System;
 using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.BZBQB;
+using AperionQB.Infrastructure.Logging;
 using AperionQB.Infrastructure.QuickBooks.Payments;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -11,11 +12,11 @@ namespace AperionQB.Infrastructure
     [DisallowConcurrentExecution]
     public class CheckDBForPaymentDeletions : IJob
     {
-        private readonly ILogger<CheckDBForPaymentDeletions> _logger;
+        private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
         public CheckDBForPaymentDeletions(ILogger<CheckDBForPaymentDeletions> logger, IApplicationDbContext _context)
         {
-            _logger = logger;
+            _logger = new Logger();
             this._context = _context;
         }
 
@@ -25,24 +26,24 @@ namespace AperionQB.Infrastructure
             try
             {
 
-                Console.WriteLine(DateTime.Now + ": Checking for new payment deletions in bzb");
-                int count = _context.PaymentsToMigrateToIntuit.ToList().Where((pmnt) => (pmnt.DeletedBool == true)).Count();
+                _logger.log(DateTime.Now + ": Checking for new payment deletions in bzb");
+                int count = _context.PaymentsToMigrateToIntuit.ToList().Where((pmnt) => (pmnt.DeletedBool == true && pmnt.DeletedByQBIDate == null)).Count();
                 if (count > 0)
                 {
-                    Console.WriteLine(DateTime.Now + ": Found " + count + " payment deletions to process");
+                    _logger.log(DateTime.Now + ": Found " + count + " payment deletions to process");
                     bool result = new DeleteAllFlaggedPayments(_context).deleteAllFlaggedPaymentsFromQuickBooks().Result;
 
                 }
                 else
                 {
-                    Console.WriteLine(DateTime.Now + ": No new payment deletions to process");
+                    _logger.log(DateTime.Now + ": No new payment deletions to process");
                 }
 
                 return Task.CompletedTask;
             }
             catch (Exception e)
             {
-                Console.WriteLine(DateTime.Now + ": An error occured during job execution(CheckDBForPaymentDeletions): " + e.Message + "\n" + e.StackTrace);
+                _logger.log(DateTime.Now + ": An error occured during job execution(CheckDBForPaymentDeletions): " + e.Message + "\n" + e.StackTrace);
                 return Task.CompletedTask;
             }
 
@@ -60,7 +61,7 @@ namespace AperionQB.Infrastructure
                     .ForJob(jobKey)
                     .StartAt(DateTimeOffset.Now.AddMinutes(5))
                     .WithSimpleSchedule(schedule =>
-                        schedule.WithIntervalInMinutes(30).RepeatForever()));
+                        schedule.WithIntervalInMinutes(5).RepeatForever()));
         }
     }
 }

@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
-	public class QuickBooksKeyActions : QuickBooksOperation
+	public class QuickBooksKeyActions
 	{
         OAuth2Client Client;
 
@@ -41,7 +41,6 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         public async Task GetAuthTokensAsync(string code, string realmId)
         {
-            Console.WriteLine("Code: " + code + "\nRealm: " + realmId);
             Client = this.Initialize();
             TokenResponse response = await Client.GetBearerTokenAsync(code);
             var access_token = response.AccessToken;
@@ -52,6 +51,7 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         public async Task<bool> refreshAccessTokens()
         {
+
             Client = this.Initialize();
             try
             {
@@ -60,7 +60,7 @@ namespace AperionQB.Infrastructure.QuickBooks
                 IntuitInfoHandler.UpdateTokens(response.AccessToken, response.RefreshToken, (string)info.RealmId);
             }catch (Exception e)
             {
-                Console.WriteLine(e.Message + "\n" + e.ToString());
+                Console.WriteLine(DateTime.Now +": " +  e.Message);
                 return false;
             }
 

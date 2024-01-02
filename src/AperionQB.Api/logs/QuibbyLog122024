@@ -1,0 +1,78 @@
+1/2/2024 8:26:32 AM: About to update access tokens
+1/2/2024 8:26:32 AMObject reference not set to an instance of an object.
+1/2/2024 8:27:56 AM: About to update access tokens
+1/2/2024 8:27:58 AM: Successfully updated access tokens
+1/2/2024 8:28:56 AM: Checking for new payments in bzb
+1/2/2024 8:28:56 AM: Found 1 new payments to process
+1/2/2024 8:28:56 AM: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Access token cannot be null or empty.)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuartsJobs/CheckDBForNewPayments.cs:line 33
+1/2/2024 8:32:52 AM: About to update access tokens
+1/2/2024 8:32:52 AMAccess token cannot be null or empty.
+1/2/2024 8:36:04 AM: About to update access tokens
+1/2/2024 8:36:04 AMAccess token cannot be null or empty.
+1/2/2024 8:38:25 AM: About to update access tokens
+1/2/2024 8:38:25 AM: Access token cannot be null or empty.
+1/2/2024 8:41:53 AM: About to update access tokens
+1/2/2024 8:41:53 AM: Access token cannot be null or empty.
+1/2/2024 8:43:13 AM: About to update access tokens
+1/2/2024 8:43:13 AM: Access token cannot be null or empty.
+1/2/2024 8:43:59 AM: About to update access tokens
+1/2/2024 8:43:59 AM: Access token cannot be null or empty.
+1/2/2024 8:44:30 AM: About to update access tokens
+1/2/2024 8:44:30 AM: Access token cannot be null or empty.
+1/2/2024 8:44:34 AM: About to update access tokens
+1/2/2024 8:44:34 AM: Access token cannot be null or empty.
+1/2/2024 8:47:21 AM: About to update access tokens
+1/2/2024 8:47:21 AM: Access token cannot be null or empty.
+1/2/2024 8:47:45 AM: About to update access tokens
+1/2/2024 8:47:45 AM: Access token cannot be null or empty.
+1/2/2024 8:47:55 AM: About to update access tokens
+1/2/2024 8:47:55 AM: Access token cannot be null or empty.
+1/2/2024 8:48:15 AM: About to update access tokens
+1/2/2024 8:48:15 AM: Access token cannot be null or empty.
+1/2/2024 8:49:12 AM: About to update access tokens
+1/2/2024 8:49:12 AM: testAccess token cannot be null or empty.
+1/2/2024 8:49:15 AM: About to update access tokens
+1/2/2024 8:49:15 AM: testAccess token cannot be null or empty.
+1/2/2024 8:49:33 AM: About to update access tokens
+1/2/2024 8:49:33 AM:Access token cannot be null or empty.
+1/2/2024 8:52:59 AM: About to update access tokens
+1/2/2024 8:52:59 AM:Access token cannot be null or empty.
+1/2/2024 8:58:22 AM: About to update access tokens
+1/2/2024 8:58:23 AM: Successfully updated access tokens
+1/2/2024 8:59:12 AM: About to update access tokens
+1/2/2024 8:59:12 AM:Access token cannot be null or empty.
+1/2/2024 9:03:58 AM: About to update access tokens
+1/2/2024 9:04:00 AM: Successfully updated access tokens
+1/2/2024 9:05:08 AM: About to update access tokens
+1/2/2024 9:05:10 AM: Successfully updated access tokens
+1/2/2024 9:06:08 AM: Checking for new payments in bzb
+1/2/2024 9:06:09 AM: Found 1 new payments to process
+1/2/2024 9:06:09 AM: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Access token cannot be null or empty.)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuartsJobs/CheckDBForNewPayments.cs:line 33
+1/2/2024 9:08:10 AM: About to update access tokens
+1/2/2024 9:08:11 AM:One or more errors occurred. (Object reference not set to an instance of an object.)
+1/2/2024 9:13:01 AM: About to update access tokens
+1/2/2024 9:13:01 AM:One or more errors occurred. (Object reference not set to an instance of an object.)
+1/2/2024 9:14:01 AM: Checking for new payments in bzb
+1/2/2024 9:14:02 AM: Found 1 new payments to process
+1/2/2024 9:14:02 AM: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Object reference not set to an instance of an object.)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuartsJobs/CheckDBForNewPayments.cs:line 33
+1/2/2024 9:15:21 AM: About to update access tokens
+1/2/2024 9:15:22 AM: Successfully updated access tokens
+1/2/2024 9:16:20 AM: Checking for new payments in bzb
+1/2/2024 9:16:21 AM: Found 1 new payments to process
+1/2/2024 2:16:21 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+1/2/2024 2:16:21 PM: Could not find customer mapping for BZB Customer ID: 144. Skipping...
+1/2/2024 9:38:59 AM: About to update access tokens
+1/2/2024 9:39:01 AM: Successfully updated access tokens
+1/2/2024 9:40:05 AM: About to update access tokens
+1/2/2024 9:40:07 AM: Successfully updated access tokens
+1/2/2024 9:41:44 AM: About to update access tokens
+1/2/2024 9:41:45 AM: Successfully updated access tokens

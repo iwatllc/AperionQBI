@@ -1,5 +1,6 @@
 ﻿using System;
 using AperionQB.Application.Interfaces;
+using AperionQB.Infrastructure.Logging;
 using AperionQB.Infrastructure.QuickBooks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -9,33 +10,34 @@ namespace AperionQB.Infrastructure.QuartsJobs
 {
 	public class UpdateAccessTokens : IJob
 	{
-        private readonly ILogger<UpdateAccessTokens> _logger;
+        private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
 
         public UpdateAccessTokens(ILogger<UpdateAccessTokens> logger, IApplicationDbContext _context)
         {
-            _logger = logger;
+            _logger = new Logger();
             this._context = _context;
 		}
 
         public Task Execute(IJobExecutionContext context)
         {
+          
             try
             {
-                Console.WriteLine(DateTime.Now + ": About to update access tokens");
+                _logger.log(DateTime.Now + ": About to update access tokens");
                 QuickBooksKeyActions actions = new QuickBooksKeyActions();
                 bool result = actions.refreshAccessTokens().Result;
                 if (result)
                 {
-                    Console.WriteLine(DateTime.Now + ": Successfully updated access tokens");
+                    _logger.log(DateTime.Now + ": Successfully updated access tokens");
                 }
                 else
                 {
-                    Console.WriteLine(DateTime.Now + ": An error occured while updating access tokens");
+                    _logger.log(DateTime.Now + ": An error occured while updating access tokens");
                 }
             }catch (Exception e)
             {
-                Console.WriteLine(DateTime.Now + e.Message);
+                _logger.log(DateTime.Now + ":" + e.Message);
             }
             return Task.CompletedTask;
 

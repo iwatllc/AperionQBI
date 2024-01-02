@@ -1,0 +1,58 @@
+12/29/2023 4:35:12 PM: About to update access tokens
+12/29/2023 4:35:13 PM: Successfully updated access tokens
+12/29/2023 4:36:11 PM: Checking for new payments in bzb
+12/29/2023 4:36:12 PM: Found 1 new payments to process
+12/29/2023 9:36:12 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+12/29/2023 9:36:12 PM: Could not find customer mapping for BZB Customer ID: 144. Skipping...Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at lambda_method163(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at AperionQB.Infrastructure.QuickBooks.Payments.AddAllPaymentsToQuickBooks.addAllPaymentstoQuickBooks() in /Users/taylorfernandez/Desktop/AperionQBI/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuickBooks/Payments/AddAllPaymentsToQuickBooks.cs:line 32
+12/29/2023 4:38:11 PM: Checking for payment updates in bzb
+12/29/2023 4:38:11 PM: No new payment updates to process
+12/29/2023 4:38:36 PM: About to update access tokens
+12/29/2023 4:38:38 PM: Successfully updated access tokens
+12/29/2023 4:39:36 PM: Checking for new payments in bzb
+12/29/2023 4:39:36 PM: Found 1 new payments to process
+12/29/2023 9:39:36 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+12/29/2023 9:39:37 PM: Could not find customer mapping for BZB Customer ID: 144. Skipping...Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at lambda_method127(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at AperionQB.Infrastructure.QuickBooks.Payments.AddAllPaymentsToQuickBooks.addAllPaymentstoQuickBooks() in /Users/taylorfernandez/Desktop/AperionQBI/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuickBooks/Payments/AddAllPaymentsToQuickBooks.cs:line 32
+12/29/2023 4:41:36 PM: Checking for payment updates in bzb
+12/29/2023 4:41:36 PM: No new payment updates to process
+12/29/2023 4:43:36 PM: Checking for new payment deletions in bzb
+12/29/2023 4:43:36 PM: Found 2 payment deletions to process
+12/29/2023 4:43:36 PM: About to delete payment with QBPaymentID: 13
+12/29/2023 4:43:36 PM: Successfully deleted payment with QBPaymentID: 13
+12/29/2023 4:43:36 PM: About to delete payment with QBPaymentID: 14
+12/29/2023 4:43:36 PM: Successfully deleted payment with QBPaymentID: 14
+12/29/2023 4:43:41 PM: About to update access tokens
+12/29/2023 4:43:43 PM: Successfully updated access tokens
+12/29/2023 4:44:41 PM: Checking for new payments in bzb
+12/29/2023 4:44:42 PM: Found 1 new payments to process
+12/29/2023 9:44:42 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+12/29/2023 4:46:41 PM: Checking for payment updates in bzb
+12/29/2023 4:46:41 PM: No new payment updates to process
+12/29/2023 4:48:23 PM: About to update access tokens
+12/29/2023 4:48:25 PM: Successfully updated access tokens
+12/29/2023 4:49:23 PM: Checking for new payments in bzb
+12/29/2023 4:49:24 PM: Found 1 new payments to process
+12/29/2023 9:49:24 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+12/29/2023 9:49:24 PM: Could not find customer mapping for BZB Customer ID: 144. Skipping...Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at lambda_method127(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at AperionQB.Infrastructure.QuickBooks.Payments.AddAllPaymentsToQuickBooks.addAllPaymentstoQuickBooks() in /Users/taylorfernandez/Desktop/AperionQBI/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuickBooks/Payments/AddAllPaymentsToQuickBooks.cs:line 33
+12/29/2023 4:49:33 PM: About to update access tokens
+12/29/2023 4:49:35 PM: Successfully updated access tokens
+12/29/2023 4:50:33 PM: Checking for new payments in bzb
+12/29/2023 4:50:33 PM: Found 1 new payments to process
+12/29/2023 9:50:33 PM: Found ID: 12 BZB Customer ID: 144 Payment Amount: 4253.00 Memo: Sample payment where user mapping does not exist
+12/29/2023 9:50:33 PM: Could not find customer mapping for BZB Customer ID: 144. Skipping...
+12/29/2023 4:52:33 PM: Checking for payment updates in bzb
+12/29/2023 4:52:33 PM: No new payment updates to process

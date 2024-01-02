@@ -1,15 +1,18 @@
 ﻿using System;
 using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.BZBQB;
+using AperionQB.Infrastructure.Logging;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
 	public class DeleteAllFlaggedPayments
 	{
         private readonly IApplicationDbContext _context;
+        private readonly Logger _logger;
         public DeleteAllFlaggedPayments(IApplicationDbContext _context)
         { 
             this._context = _context;
+            this._logger = new Logger();
         }
 
         public async Task<bool> deleteAllFlaggedPaymentsFromQuickBooks()
@@ -20,7 +23,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
             foreach(QBPayments payment in payments)
             {
-                Console.WriteLine(DateTime.Now + ": About to delete payment with QBPaymentID: " + payment.id);
+                _logger.log(DateTime.Now + ": About to delete payment with QBPaymentID: " + payment.id);
 
                 //only tell intuit to delete the payment if it has been pushed to intuit already
                 if (payment.intuitPaymentID.HasValue)
@@ -32,7 +35,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 _context.PaymentsToMigrateToIntuit.Update(payment);
 
                 await _context.SaveChangesAsync();
-                Console.WriteLine(DateTime.Now + ": Successfully deleted payment with QBPaymentID: " + payment.id);
+                _logger.log(DateTime.Now + ": Successfully deleted payment with QBPaymentID: " + payment.id);
             }
             
             return false; 

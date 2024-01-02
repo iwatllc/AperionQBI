@@ -2,16 +2,19 @@
 using AperionQB.Application.Features.QuickBooks.Commands;
 using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.BZBQB;
+using AperionQB.Infrastructure.Logging;
 using Intuit.Ipp.Data;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
 	public class UpdateAllPaymentsInQuickBooks
 	{
-		IApplicationDbContext _context;
+		private readonly IApplicationDbContext _context;
+		private readonly Logger _logger;
 		public UpdateAllPaymentsInQuickBooks(IApplicationDbContext context)
 		{
-			_context = context; 
+			_context = context;
+			_logger = new Logger();
 		}
 
 		public async Task<bool> UpdateAllPaymentsInQB()
@@ -24,7 +27,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 				transactions = _context.QBUpdateTransactions.ToList().Where((trans) => (trans.updateBool == false && trans.datePosted == null));
 			}catch (Exception e)
 			{
-				Console.WriteLine(DateTime.UtcNow + ": Could not fetch UpdateTransactions from the database. Check connection and try again: " + e.Message);
+                _logger.log(DateTime.UtcNow + ": Could not fetch UpdateTransactions from the database. Check connection and try again: " + e.Message);
 				return false; 
 			}
 
@@ -38,12 +41,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 					paymentsToUpdate = _context.PaymentsToMigrateToIntuit.Where((pmnt) => (pmnt.id == transaction.QBPaymentsID && pmnt.intuitPaymentID != null));
 					if(paymentsToUpdate.Count() == 0)
 					{
-						Console.WriteLine(DateTime.Now + ": Payment with QBPayment ID: " + transaction.QBPaymentsID + " hasn't been pushed to intuit yet. Please check to make sure a valid Customer Mapping is available. Skipping....");
+                        _logger.log(DateTime.Now + ": Payment with QBPayment ID: " + transaction.QBPaymentsID + " hasn't been pushed to intuit yet. Please check to make sure a valid Customer Mapping is available. Skipping....");
 					}
 
 					for (int i = 0; i < paymentsToUpdate.Count(); i++)
 					{
-						Console.WriteLine(DateTime.Now + ": Updating intuit payment with intuitID: " + paymentsToUpdate.ElementAt(i).intuitPaymentID);
+                        _logger.log(DateTime.Now + ": Updating intuit payment with intuitID: " + paymentsToUpdate.ElementAt(i).intuitPaymentID);
 
 						if (!paymentsToUpdate.ElementAt(i).intuitPaymentID.HasValue)
 						{
@@ -63,12 +66,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 							transaction.updateBool = true; 
 							_context.QBUpdateTransactions.Update(transaction);
 							await _context.SaveChangesAsync();
-							Console.WriteLine(DateTime.Now + ": Successfully updated payment with intuitID: "  + paymentsToUpdate.ElementAt(0).intuitPaymentID);
+                            _logger.log(DateTime.Now + ": Successfully updated payment with intuitID: "  + paymentsToUpdate.ElementAt(0).intuitPaymentID);
 						}
 					}
 				}catch(Exception e)
-				{ 
-					Console.WriteLine(DateTime.Now + ": Could not find any payments with payment ID: " + transaction.QBPaymentsID  + ". " + e.Message);
+				{
+                    _logger.log(DateTime.Now + ": Could not find any payments with payment ID: " + transaction.QBPaymentsID  + ". " + e.Message);
 				}
 			}
 

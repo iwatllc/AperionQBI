@@ -1,6 +1,7 @@
 ﻿using System;
 using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.BZBQB;
+using AperionQB.Infrastructure.Logging;
 using AperionQB.Infrastructure.QuickBooks.Payments;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -11,11 +12,11 @@ namespace AperionQB.Infrastructure
     [DisallowConcurrentExecution]
     public class CheckDBForPaymentUpdates : IJob
     {
-        private readonly ILogger<CheckDBForPaymentUpdates> _logger;
+        private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
         public CheckDBForPaymentUpdates(ILogger<CheckDBForPaymentUpdates> logger, IApplicationDbContext _context)
         {
-            _logger = logger;
+            _logger = new Logger();
             this._context = _context;
         }
 
@@ -24,24 +25,24 @@ namespace AperionQB.Infrastructure
         {
             try
             {
-                Console.WriteLine(DateTime.Now + ": Checking for payment updates in bzb");
+                _logger.log(DateTime.Now + ": Checking for payment updates in bzb");
                 int count = _context.QBUpdateTransactions.ToList().Where((trans) => (trans.updateBool == false && trans.datePosted == null)).Count();
 
                 if (count > 0)
                 {
-                    Console.WriteLine(DateTime.Now + ": Found " + count + " new payment updates to process");
+                    _logger.log(DateTime.Now + ": Found " + count + " new payment updates to process");
                     bool result =  new UpdateAllPaymentsInQuickBooks(_context).UpdateAllPaymentsInQB().Result;
                 }
                 else
                 {
-                    Console.WriteLine(DateTime.Now + ": No new payment updates to process");
+                    _logger.log(DateTime.Now + ": No new payment updates to process");
                 }
 
                 return Task.CompletedTask;
             }
             catch (Exception e)
             {
-                Console.WriteLine(DateTime.Now + ": An error occured during job execution(CheckDBForPaymentUpdates): " + e.Message + "\n" + e.StackTrace);
+                _logger.log(DateTime.Now + ": An error occured during job execution(CheckDBForPaymentUpdates): " + e.Message + "\n" + e.StackTrace);
                 return Task.CompletedTask;
             }
 
@@ -59,7 +60,7 @@ namespace AperionQB.Infrastructure
                     .ForJob(jobKey)
                     .StartAt(DateTimeOffset.Now.AddMinutes(3))
                     .WithSimpleSchedule(schedule =>
-                        schedule.WithIntervalInMinutes(30).RepeatForever()));
+                        schedule.WithIntervalInMinutes(5).RepeatForever()));
         }
     }
 }

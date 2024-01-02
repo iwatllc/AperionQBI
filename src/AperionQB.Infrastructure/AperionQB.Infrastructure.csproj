@@ -30,11 +30,18 @@
     <None Remove="QuickBooks\Customer\" />
     <None Remove="QuickBooks\Payments\" />
     <None Remove="QuartsJobs\" />
+    <None Remove="Logger\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="QuickBooks\TokenManagement\" />
     <Folder Include="QuickBooks\Customer\" />
     <Folder Include="QuickBooks\Payments\" />
     <Folder Include="QuartsJobs\" />
+    <Folder Include="Logger\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="QuickBooks\IntuitInfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

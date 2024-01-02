@@ -1,6 +1,8 @@
 ﻿using System;
 using AperionQB.Domain.Entities.QuickBooks;
+using Intuit.Ipp.Data;
 using Newtonsoft.Json;
+using Quartz;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
@@ -23,16 +25,32 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         public static IntuitInfo getIntuitInfo()
         {
+            IntuitInfo info = null;
             try
             {
-                string json = File.ReadAllText("/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuickBooks/IntuitInfo.json");
-                return JsonConvert.DeserializeObject<IntuitInfo>(json);
-            }catch (Exception e)
+                string json = File.ReadAllText(getIntuitInfoPath());
+                info =  JsonConvert.DeserializeObject<IntuitInfo>(json);
+                if(info.AccessToken != null && info.RefreshToken != null)
+                {
+                    return info;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                 
+                }
+            }
+            catch (IOException)
             {
                 Console.WriteLine("Error while loading IntuitInfo: Path to json file seems to be incorrect.");
                 return null;
             }
-
+            catch (ArgumentException)
+            {
+          
+                Console.WriteLine("It appears that tokens do not currently exist. Get new tokens by going to {base url}/api/GetNewTokens and try again");
+                return info;
+            }
         }
 
         public static bool saveIntuitInfo(IntuitInfo info)
@@ -40,7 +58,8 @@ namespace AperionQB.Infrastructure.QuickBooks
             try
             {
                 string json = JsonConvert.SerializeObject(info);
-                File.WriteAllText("/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/QuickBooks/IntuitInfo.json", json);
+             
+                File.WriteAllText(getIntuitInfoPath(), json);
                 return true;
             }catch (Exception e)
             {
@@ -48,6 +67,21 @@ namespace AperionQB.Infrastructure.QuickBooks
                 return false;
             }
 
+        }
+       
+        public static string getIntuitInfoPath()
+        {
+            try
+            {
+                string temp = Directory.GetCurrentDirectory();
+                temp = temp.Replace("AperionQB.Api", "AperionQB.Infrastructure/QuickBooks/IntuitInfo.json");
+                Console.WriteLine(temp);
+                return temp;
+            }catch (Exception e)
+            {
+                Console.WriteLine("Path could not automatically be set. Please update path in IntuitInfoHandler.cs");
+                return "";
+            }
         }
     }
 }
