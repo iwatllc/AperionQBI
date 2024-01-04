@@ -1,5 +1,4 @@
-﻿using System;
-using AperionQB.Application.Interfaces;
+﻿using AperionQB.Application.Interfaces;
 using AperionQB.Infrastructure.Logging;
 using AperionQB.Infrastructure.QuickBooks;
 using Microsoft.Extensions.Logging;
@@ -8,8 +7,8 @@ using Quartz;
 
 namespace AperionQB.Infrastructure.QuartsJobs
 {
-	public class UpdateAccessTokens : IJob
-	{
+    public class UpdateAccessTokens : IJob
+    {
         private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
 
@@ -17,11 +16,11 @@ namespace AperionQB.Infrastructure.QuartsJobs
         {
             _logger = new Logger();
             this._context = _context;
-		}
+        }
 
         public Task Execute(IJobExecutionContext context)
         {
-          
+
             try
             {
                 _logger.log(DateTime.Now + ": About to update access tokens");
@@ -35,7 +34,8 @@ namespace AperionQB.Infrastructure.QuartsJobs
                 {
                     _logger.log(DateTime.Now + ": An error occured while updating access tokens");
                 }
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 _logger.log(DateTime.Now + ":" + e.Message);
             }
@@ -58,4 +58,3 @@ namespace AperionQB.Infrastructure.QuartsJobs
         }
     }
 }
-

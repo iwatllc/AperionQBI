@@ -1,19 +1,18 @@
-﻿using System;
-using System.Text.Json;
-using Intuit.Ipp.Data;
+﻿using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
-	public class AddPayment : QuickBooksOperation
-	{
+    public class AddPayment : QuickBooksOperation
+    {
+        private Object l = new Object();
         /**
          * Example found here: https://github.com/IntuitDeveloper/SampleApp-CRUD-.Net/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs#L264
          */
         public int addPayment(decimal totalAmt, int customerId, string lineItemDescription, string memo)
-		{
+        {
             try
-            { 
+            {
 
                 SalesReceipt salesReceipt = new SalesReceipt();
 
@@ -39,7 +38,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                     name = "Customer.ID",
                     Value = customerId.ToString()
                 }; ;
-                
+
 
 
                 List<Line> lineList = new List<Line>();
@@ -52,7 +51,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                 line.DetailType = LineDetailTypeEnum.SalesItemLineDetail;
                 line.DetailTypeSpecified = true;
-  
+
                 line.AnyIntuitObject = new SalesItemLineDetail()
                 {
                     Qty = 1,
@@ -63,22 +62,25 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                 lineList.Add(line);
                 salesReceipt.Line = lineList.ToArray();
+                SalesReceipt result = null;
 
-                DataService service = new DataService(serviceContext);
-
-                SalesReceipt result = service.Add(salesReceipt);
+                lock (l)
+                {
+                    DataService service = new DataService(serviceContext);
+                    result = service.Add(salesReceipt);
+                }
 
                 if (result != null)
                 {
                     return Int32.Parse(result.Id);
                 }
-            }catch (Exception e)
-			{
-				Console.WriteLine(e.Message + "\n" + e.StackTrace);
-				return -1;
-			}
-			return -1;
-		}
-	}
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + "\n" + e.StackTrace);
+                return -1;
+            }
+            return -1;
+        }
+    }
 }
-

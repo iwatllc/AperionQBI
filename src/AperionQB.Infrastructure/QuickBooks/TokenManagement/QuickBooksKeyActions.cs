@@ -39,15 +39,6 @@ namespace AperionQB.Infrastructure.QuickBooks
             return result;
         }
 
-        public async Task GetAuthTokensAsync(string code, string realmId)
-        {
-            Client = this.Initialize();
-            TokenResponse response = await Client.GetBearerTokenAsync(code);
-            var access_token = response.AccessToken;
-            var refresh_token = response.RefreshToken;
-            IntuitInfoHandler.UpdateTokens(access_token, refresh_token, realmId);
-
-        }
 
         public async Task<bool> refreshAccessTokens()
         {

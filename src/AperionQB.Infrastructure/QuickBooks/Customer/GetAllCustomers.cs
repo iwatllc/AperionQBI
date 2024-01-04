@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using AperionQB.Domain.Entities.QuickBooks;
-using Intuit.Ipp.Core;
+﻿using System.Collections.ObjectModel;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
-using Intuit.Ipp.Security;
-using Newtonsoft.Json;
+
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
@@ -20,7 +16,8 @@ namespace AperionQB.Infrastructure.QuickBooks
             StreamWriter customerCSV = new StreamWriter("Customers.CSV");
             customerCSV.WriteLine("Intuit ID,Customer Name,Billing Address, Company Name, Name, Primary Email Address,");
 
-            for(int i = 0; i < Math.Ceiling(numCustomers/10); i++) {
+            for (int i = 0; i < Math.Ceiling(numCustomers / 10); i++)
+            {
                 ReadOnlyCollection<Customer> companyInfo;
                 if (i == 0)
                 {
@@ -41,6 +38,3 @@ namespace AperionQB.Infrastructure.QuickBooks
         }
     }
 }
-
-
-

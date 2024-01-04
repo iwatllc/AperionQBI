@@ -1,38 +1,32 @@
-﻿using System;
-using AperionQB.Application.Features.QuickBooks.Commands;
-using AperionQB.Domain.Entities.QuickBooks;
+﻿using AperionQB.Application.Features.QuickBooks.Commands;
 
 namespace AperionQB.Application.Interfaces
 {
-	public interface IQuickBooksManager
-	{
+    public interface IQuickBooksManager
+    {
 
-		string getKeys();
+        string getKeys();
 
-		public Task<bool> getKeysCallback(string code, string realmId);
+        public Task<bool> getKeysCallback(string code, string realmId);
 
-		bool getAllCustomers();
+        bool getAllCustomers();
 
-		QBCustomer getCustomer(int id);
+        QBCustomer getCustomer(int id);
 
-		int addPayment(int totalAmt, string customerRef, int customerId, string memo);
+        int addPayment(int totalAmt, string customerRef, int customerId, string memo);
 
-		bool addInvoice();
+        bool addInvoice();
 
-		QBPayment getPayment(int id);
+        QBPayment getPayment(int id);
 
-		QBInvoice getInvoice();
+        QBInvoice getInvoice();
 
-		bool deletePayment(int id);
+        bool deletePayment(int id);
 
-		public Task<bool> refreshAccessTokens();
+        public Task<bool> refreshAccessTokens();
 
-		bool updatePayment(QBPayment payment);
+        bool updatePayment(QBPayment payment);
 
-		bool getAllPayments();
-
-		bool addCustomer(string firstName, string lastName, string primaryEmailAddress, string BillAddrL1, string City, string displayName);
-
+        bool getAllPayments();
     }
 }
-

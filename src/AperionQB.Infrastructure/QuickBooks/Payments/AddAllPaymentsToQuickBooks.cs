@@ -1,12 +1,10 @@
-﻿using System;
-using AperionQB.Application.Interfaces;
+﻿using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.BZBQB;
 using AperionQB.Infrastructure.Logging;
-using Microsoft.EntityFrameworkCore;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
-	public class AddAllPaymentsToQuickBooks
+    public class AddAllPaymentsToQuickBooks
     {
         private readonly IApplicationDbContext _context;
         private readonly Logger _logger;
@@ -18,29 +16,29 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
 
         public async Task<bool> addAllPaymentstoQuickBooks()
-		{
+        {
             var payments = _context.PaymentsToMigrateToIntuit.ToList().Where(((pmnt) => (pmnt.intuitPaymentID == null && pmnt.DeletedBool == false)));
             AddPayment addPayment = new AddPayment();
             List<int> paymentsIds = new List<int>();
 
             foreach (QBPayments payment in payments)
             {
-                _logger.log(DateTime.UtcNow + ": Found ID: " + payment.id + " BZB Customer ID: " + payment.BZBCustomerID + " Payment Amount: " + payment.totalAmount + " Memo: " + payment.Memo);
-                QBCustomerMapping mapping = null;
+                _logger.log(DateTime.UtcNow + ": Found ID: " + payment.id + " BZB Customer ID: " + payment.BZBCompanyID + " Payment Amount: " + payment.totalAmount + " Memo: " + payment.Memo);
+                QBCustomerMapping? mapping = null;
 
                 try
                 {
-                     mapping = _context.BZBQuickBooksCustomerMappings.Where((map) => (map.bzbId == payment.BZBCustomerID)).First();
+                    mapping = _context.BZBQuickBooksCustomerMappings.Where((map) => (map.CompanyID == payment.BZBCompanyID)).First();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    _logger.log(DateTime.UtcNow + ": Could not find customer mapping for BZB Customer ID: " + payment.BZBCustomerID + ". Skipping...");
+                    _logger.log(DateTime.UtcNow + ": Could not find customer mapping for BZB Customer ID: " + payment.BZBCompanyID + ". Skipping...");
                 }
 
 
                 if (mapping != null)
                 {
-                    int result = addPayment.addPayment(payment.totalAmount, mapping.qbId, payment.Memo, payment.Memo);
+                    int result = addPayment.addPayment(payment.totalAmount, (int)mapping.qbId, payment.Memo, payment.Memo);
 
                     if (result == -1)
                     {
@@ -52,11 +50,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                     _context.PaymentsToMigrateToIntuit.Update(payment);
                     await _context.SaveChangesAsync();
+                    _logger.log(DateTime.UtcNow + ": Payment with Payment ID: " + payment.id + " has been successfully pushed to QuickBooks");
+
                 }
             }
 
             return true;
         }
-	}
+    }
 }
-

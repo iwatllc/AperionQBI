@@ -1,16 +1,13 @@
-﻿using System;
-using AperionQB.Domain.Entities.QuickBooks;
-using Intuit.Ipp.Data;
+﻿using AperionQB.Domain.Entities.QuickBooks;
 using Newtonsoft.Json;
-using Quartz;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
-	public class IntuitInfoHandler
-	{
-		public IntuitInfoHandler()
-		{
-		}
+    public class IntuitInfoHandler
+    {
+        public IntuitInfoHandler()
+        {
+        }
 
         public static bool UpdateTokens(string access_token, string refresh_token, string realmId)
         {
@@ -29,15 +26,15 @@ namespace AperionQB.Infrastructure.QuickBooks
             try
             {
                 string json = File.ReadAllText(getIntuitInfoPath());
-                info =  JsonConvert.DeserializeObject<IntuitInfo>(json);
-                if(info.AccessToken != null && info.RefreshToken != null)
+                info = JsonConvert.DeserializeObject<IntuitInfo>(json);
+                if (info.AccessToken != null && info.RefreshToken != null)
                 {
                     return info;
                 }
                 else
                 {
                     throw new ArgumentException();
-                 
+
                 }
             }
             catch (IOException)
@@ -47,7 +44,7 @@ namespace AperionQB.Infrastructure.QuickBooks
             }
             catch (ArgumentException)
             {
-          
+
                 Console.WriteLine("It appears that tokens do not currently exist. Get new tokens by going to {base url}/api/GetNewTokens and try again");
                 return info;
             }
@@ -58,26 +55,27 @@ namespace AperionQB.Infrastructure.QuickBooks
             try
             {
                 string json = JsonConvert.SerializeObject(info);
-             
+
                 File.WriteAllText(getIntuitInfoPath(), json);
                 return true;
-            }catch (Exception e)
+            }
+            catch (Exception)
             {
                 Console.WriteLine("Error while saving IntuitInfo: Path to json file seems to be incorrect.");
                 return false;
             }
 
         }
-       
+
         public static string getIntuitInfoPath()
         {
             try
             {
                 string temp = Directory.GetCurrentDirectory();
                 temp = temp.Replace("AperionQB.Api", "AperionQB.Infrastructure/QuickBooks/IntuitInfo.json");
-                Console.WriteLine(temp);
                 return temp;
-            }catch (Exception e)
+            }
+            catch (Exception)
             {
                 Console.WriteLine("Path could not automatically be set. Please update path in IntuitInfoHandler.cs");
                 return "";
@@ -85,4 +83,3 @@ namespace AperionQB.Infrastructure.QuickBooks
         }
     }
 }
-

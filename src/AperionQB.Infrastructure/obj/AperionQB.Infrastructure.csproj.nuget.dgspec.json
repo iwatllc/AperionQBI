@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj": {}
+    "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj": {
+    "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj",
+        "projectUniqueName": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj",
         "projectName": "AperionQB.Application",
-        "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj",
+        "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj",
         "packagesPath": "/Users/taylorfernandez/.nuget/packages/",
-        "outputPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/obj/",
+        "outputPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/taylorfernandez/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
-                "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj"
+              "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+                "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+    "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
+        "projectUniqueName": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
         "projectName": "AperionQB.Domain",
-        "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
+        "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
         "packagesPath": "/Users/taylorfernandez/.nuget/packages/",
-        "outputPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/obj/",
+        "outputPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/taylorfernandez/.nuget/NuGet/NuGet.Config"
@@ -134,14 +134,14 @@
         }
       }
     },
-    "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj": {
+    "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
+        "projectUniqueName": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
         "projectName": "AperionQB.Infrastructure",
-        "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
+        "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
         "packagesPath": "/Users/taylorfernandez/.nuget/packages/",
-        "outputPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Infrastructure/obj/",
+        "outputPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/taylorfernandez/.nuget/NuGet/NuGet.Config"
@@ -157,11 +157,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj": {
-                "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj"
+              "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj": {
+                "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Application/AperionQB.Application.csproj"
               },
-              "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
-                "projectPath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj"
+              "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+                "projectPath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj"
               }
             }
           }

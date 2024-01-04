@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using AperionQB.Application.Features.QuickBooks.Commands;
-using Intuit.Ipp.Core;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using Intuit.Ipp.QueryFilter;
@@ -10,8 +8,10 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
     public class UpdatePayment : QuickBooksOperation
     {
-		public bool updatePayment(QBPayment payment)
-		{
+        private Object l = new object();
+
+        public bool updatePayment(QBPayment payment)
+        {
             QueryService<SalesReceipt> qService = new QueryService<SalesReceipt>(serviceContext);
 
 
@@ -25,11 +25,13 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
             receiptToUpdate.Line.ElementAt(0).Amount = payment.totalAmount;
             receiptToUpdate.Line.ElementAt(0).AmountSpecified = true;
+            SalesReceipt result;
 
-
-
-            DataService dService = new DataService(serviceContext);
-            var result = dService.Update(receiptToUpdate);
+            lock (l)
+            {
+                DataService dService = new DataService(serviceContext);
+                result = dService.Update(receiptToUpdate);
+            }
 
             if (result != null)
             {
@@ -37,9 +39,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
             }
             else
             {
-                return false; 
+                return false;
             }
         }
-	}
+    }
 }
-

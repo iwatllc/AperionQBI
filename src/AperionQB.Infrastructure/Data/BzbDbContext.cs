@@ -2,7 +2,6 @@
 using AperionQB.Domain.Entities;
 using AperionQB.Domain.Entities.BZBQB;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace AperionQB.Infrastructure.Data;
 
@@ -83,11 +82,11 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
 
     public virtual DbSet<Massinvoicepayment> Massinvoicepayments { get; set; }
 
-    
+
 
     public virtual DbSet<Paymenttype> Paymenttypes { get; set; }
 
-    
+
 
     public virtual DbSet<Status> Statuses { get; set; }
 
@@ -95,8 +94,9 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
 
     public virtual DbSet<Term> Terms { get; set; }
 
-    
-    async Task IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken) {
+
+    async Task IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken)
+    {
         await base.SaveChangesAsync();
     }
 
@@ -177,7 +177,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .HasColumnName("type");
         });
 
-        
+
         modelBuilder.Entity<Company>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
@@ -247,7 +247,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .HasMaxLength(255)
                 .HasColumnName("value");
 
-           
+
 
             entity.HasOne(d => d.Company).WithMany(p => p.CompanyCommunications)
                 .HasForeignKey(d => d.CompanyId)
@@ -857,7 +857,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .HasMaxLength(50)
                 .HasColumnName("value");
 
-         
+
 
             entity.HasOne(d => d.Contact).WithMany(p => p.ContactCommunications)
                 .HasForeignKey(d => d.ContactId)
@@ -1027,7 +1027,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .HasConstraintName("FK_contactterms_termsid");
         });
 
-        
+
 
         modelBuilder.Entity<Invoice>(entity =>
         {
@@ -1560,7 +1560,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .HasConstraintName("FK_massinvoicepayment_paymenttypeid");
         });
 
-        
+
 
         modelBuilder.Entity<Paymenttype>(entity =>
         {
@@ -1675,7 +1675,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .UseCollation("utf8mb3_general_ci");
 
             entity.Property(e => e.id).HasColumnName("id");
-            entity.Property(e => e.bzbId).HasColumnName("bzbId");
+            entity.Property(e => e.CompanyID).HasColumnName("CompanyID");
             entity.Property(e => e.qbId).HasColumnName("qbId");
 
         });
@@ -1691,10 +1691,13 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
                 .UseCollation("utf8mb3_general_ci");
 
             entity.Property(e => e.id).HasColumnName("id");
-            entity.Property(e => e.BZBCustomerID).HasColumnName("BZBCustomerID");
-            entity.Property(e => e.totalAmount).HasColumnName("totalAmount").HasPrecision(10,2);
+            entity.Property(e => e.InvoiceID).HasColumnName("InvoiceID");
+            entity.Property(e => e.InvoicePaymentID).HasColumnName("InvoicePaymentID");
+            entity.Property(e => e.BZBCompanyID).HasColumnName("BZBCompanyID");
+            entity.Property(e => e.totalAmount).HasColumnName("totalAmount").HasPrecision(10, 2);
             entity.Property(e => e.Memo).HasColumnName("Memo").HasColumnType("Text");
             entity.Property(e => e.CreatedDate).HasColumnName("CreatedDate").HasColumnType("datetime");
+            entity.Property(e => e.CreatedBy).HasColumnName("CreatedBy").HasColumnType("Text");
             entity.Property(e => e.DeletedBool).HasColumnName("DeletedBool");
             entity.Property(e => e.DeletedBy).HasColumnName("DeletedBy").HasColumnType("Text");
             entity.Property(e => e.DeletedByDate).HasColumnName("DeletedByDate").HasColumnType("datetime");
@@ -1702,7 +1705,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.Property(e => e.intuitPaymentID).HasColumnName("intuitPaymentID");
         });
 
-    modelBuilder.Entity<QBUpdateTransactions>(entity =>
+        modelBuilder.Entity<QBUpdateTransactions>(entity =>
         {
             entity.HasKey(e => e.id).HasName("primary");
 
@@ -1725,5 +1728,5 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-    
+
 }

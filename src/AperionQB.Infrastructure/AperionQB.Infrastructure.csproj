@@ -30,14 +30,18 @@
     <None Remove="QuickBooks\Customer\" />
     <None Remove="QuickBooks\Payments\" />
     <None Remove="QuartsJobs\" />
-    <None Remove="Logger\" />
+    <None Remove="QuartsJobs\Jobs\" />
+    <None Remove="QuartsJobs\Jobs\Customer\" />
+    <None Remove="QuartsJobs\Jobs\Payments\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="QuickBooks\TokenManagement\" />
     <Folder Include="QuickBooks\Customer\" />
     <Folder Include="QuickBooks\Payments\" />
     <Folder Include="QuartsJobs\" />
-    <Folder Include="Logger\" />
+    <Folder Include="QuartsJobs\Jobs\" />
+    <Folder Include="QuartsJobs\Jobs\Customer\" />
+    <Folder Include="QuartsJobs\Jobs\Payments\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="QuickBooks\IntuitInfo.json">

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-//using AperionQB.Application.Features.Invoices.Commands;
 using AperionQB.Application.Features.Invoices.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +21,7 @@ public class IntuitGetCustomerByID : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetCustomerByID([FromQuery]int id)
+    public async Task<IActionResult> GetCustomerByID([FromQuery] int id)
     {
         QBCustomer result = await _mediator.Send(new CommandGetCustomer(id));
         if (result != null)

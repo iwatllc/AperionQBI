@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FWkJ2BAmKCzWHcTuR4fYVe/QQVES9zKHU7kVIdCf8Uofq7eNmfjjj6ozvrOEv9kb81nqh3wq4HY0bPXL+/Y0vg==",
+  "dgSpecHash": "nd+Q1j1GfHNW0E+3LKK+DZ1moHm5e3kgVN39bU3olNIsAE/FIZutzMso0aR/ZYuveGDrqxuL1f8trnFkPRQaPw==",
   "success": true,
-  "projectFilePath": "/Users/taylorfernandez/Desktop/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
+  "projectFilePath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Domain/AperionQB.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

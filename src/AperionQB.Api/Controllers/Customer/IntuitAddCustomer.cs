@@ -20,9 +20,10 @@ namespace AperionQB.Api.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> addCustomerToIntuit([FromQuery] string firstName, [FromQuery] string lastName, [FromQuery] string primaryEmailAddress, [FromQuery] string BillAddrL1, [FromQuery] string City, [FromQuery] string displayName)
+        public async Task<IActionResult> addCustomerToIntuit()
         {
-            bool result = _mediator.Send(new CommandAddCustomer(firstName, lastName, primaryEmailAddress, BillAddrL1, City, displayName)).Result;
+            bool result = _mediator.Send(new CommandAddCustomer()).Result;
+
             if (result)
             {
                 return Ok("success");
@@ -35,4 +36,3 @@ namespace AperionQB.Api.Controllers
         }
     }
 }
-

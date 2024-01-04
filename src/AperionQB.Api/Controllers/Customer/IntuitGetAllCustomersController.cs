@@ -1,9 +1,5 @@
-﻿using System.Collections;
-//using AperionQB.Application.Features.Invoices.Commands;
-using AperionQB.Application.Features.Invoices.Queries;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using AperionQB.Infrastructure.QuickBooks;
 using AperionQB.Application.Features.QuickBooks.Commands;
 
 namespace AperionPSD.Server.Controllers;
