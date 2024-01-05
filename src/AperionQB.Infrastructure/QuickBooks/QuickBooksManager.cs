@@ -44,9 +44,14 @@ namespace AperionQB.Infrastructure.QuickBooks
             return true;
         }
 
+        public bool updateClientInfo(string clientID, string clientSecret, string callbackURL)
+        {
+            IntuitInfoHandler.updateIntuitInfo(clientID, clientSecret, callbackURL);
+            return false; 
+        }
+
         async Task<bool> IQuickBooksManager.refreshAccessTokens()
         {
-            //QuickBooksKeyActions actions = new QuickBooksKeyActions();
             return await actions.refreshAccessTokens();
         }
 

@@ -11,6 +11,8 @@ namespace AperionQB.Application.Interfaces
 
         bool getAllCustomers();
 
+        bool updateClientInfo(string clientID, string clientSecret, string callbackURL);
+
         QBCustomer getCustomer(int id);
 
         int addPayment(int totalAmt, string customerRef, int customerId, string memo);

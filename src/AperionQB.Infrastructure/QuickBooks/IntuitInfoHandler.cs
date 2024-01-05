@@ -1,12 +1,15 @@
 ﻿using AperionQB.Domain.Entities.QuickBooks;
+using AperionQB.Infrastructure.Logging;
 using Newtonsoft.Json;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
     public class IntuitInfoHandler
     {
+        private static Logger logger;
         public IntuitInfoHandler()
         {
+            logger = new Logger();
         }
 
         public static bool UpdateTokens(string access_token, string refresh_token, string realmId)
@@ -18,6 +21,26 @@ namespace AperionQB.Infrastructure.QuickBooks
             saveIntuitInfo(info);
 
             return false;
+        }
+
+        public static bool updateIntuitInfo(string clientID, string clientSecret, string callbackURL)
+        {
+            IntuitInfo info;
+            try
+            {
+                info = getIntuitInfo();
+                info.ClientId = clientID;
+                info.ClientSecret = clientSecret;
+                info.RedirectUrl = callbackURL;
+                saveIntuitInfo(info);
+                return true;
+            }
+            catch (Exception e)
+            {
+                logger.log(DateTime.Now + ": An error occured while create intuit info object: " + e.Message);
+                return false; 
+            }
+
         }
 
         public static IntuitInfo getIntuitInfo()
@@ -45,29 +68,7 @@ namespace AperionQB.Infrastructure.QuickBooks
             catch (ArgumentException)
             {
 
-                Console.WriteLine("It appears that tokens do not currently exist. Get new tokens by going to {base url}/api/GetNewTokens and try again");
-                return info;
-            }
-        }
-
-        public static bool saveIntuitInfo(IntuitInfo info)
-        {
-            try
-            {
-                string json = JsonConvert.SerializeObject(info);
-
-                File.WriteAllText(getIntuitInfoPath(), json);
-                return true;
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Error while saving IntuitInfo: Path to json file seems to be incorrect.");
-                return false;
-            }
-
-        }
-
-        public static string getIntuitInfoPath()
+                Console.WriteLine("It appears that tokens do not currently exist. Get new tokens by going to {base url}/api/GetNewTokens and try again"); return info; } } public static bool saveIntuitInfo(IntuitInfo info) { try { string json = JsonConvert.SerializeObject(info); File.WriteAllText(getIntuitInfoPath(), json); return true; } catch (Exception) { Console.WriteLine("Error while saving IntuitInfo: Path to json file seems to be incorrect."); return false; } } public static string getIntuitInfoPath()
         {
             try
             {
