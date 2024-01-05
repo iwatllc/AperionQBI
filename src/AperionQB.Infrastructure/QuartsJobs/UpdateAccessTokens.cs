@@ -52,6 +52,7 @@ namespace AperionQB.Infrastructure.QuartsJobs
                     .AddJob<UpdateAccessTokens>(jobBuilder => jobBuilder.WithIdentity(jobKey))
                     .AddTrigger(trigger => trigger
                         .ForJob(jobKey)
+                        .StartAt(DateTimeOffset.Now.AddMinutes(5))
                         .WithSimpleSchedule(schedule =>
                             schedule.WithIntervalInMinutes(30).RepeatForever()));
             }

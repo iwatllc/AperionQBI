@@ -106,3 +106,76 @@
 1/4/2024 3:06:00 PM: Successfully deleted payment with QBPaymentID: 1
 1/4/2024 3:06:53 PM: About to update access tokens
 1/4/2024 3:06:55 PM: Successfully updated access tokens
+1/4/2024 3:15:47 PM: About to update access tokens
+1/4/2024 3:15:49 PM: Successfully updated access tokens
+1/4/2024 3:15:59 PM: Checking for new companies in bzb
+1/4/2024 3:15:59 PM: Found 1 new companies to process
+1/4/2024 3:15:59 PM: Attempting to add customers to Quick Books
+1/4/2024 3:15:59 PM: Attempting to add company with CompanyID: 1511 to QuickBooks
+1/4/2024 3:16:01 PM: Successfully added company with CompanyID: 1511 to QuickBooks
+1/4/2024 3:16:47 PM: Checking for new payments in bzb
+1/4/2024 3:16:47 PM: No new payments to process
+1/4/2024 4:22:17 PM: About to update access tokens
+1/4/2024 4:22:19 PM: Successfully updated access tokens
+1/4/2024 4:23:17 PM: Checking for new payments in bzb
+1/4/2024 4:23:18 PM: No new payments to process
+1/4/2024 4:31:12 PM: About to update access tokens
+1/4/2024 4:31:14 PM: Successfully updated access tokens
+1/4/2024 4:32:12 PM: Checking for new payments in bzb
+1/4/2024 4:32:13 PM: Found 4 new payments to process
+1/4/2024 9:32:13 PM: Found ID: 2 BZB Customer ID: 342 Payment Amount: 671.34 Memo: keh
+1/4/2024 9:32:13 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:13 PM: Found ID: 3 BZB Customer ID: 342 Payment Amount: 13.45 Memo: asdf a
+1/4/2024 9:32:13 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:13 PM: Found ID: 4 BZB Customer ID: 342 Payment Amount: 1.34 Memo: asdf
+1/4/2024 9:32:13 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:13 PM: Found ID: 5 BZB Customer ID: 365 Payment Amount: 150.00 Memo: 
+1/4/2024 9:32:13 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 4:32:18 PM: Checking for new payments in bzb
+1/4/2024 4:32:19 PM: Found 5 new payments to process
+1/4/2024 9:32:19 PM: Found ID: 2 BZB Customer ID: 342 Payment Amount: 671.34 Memo: keh
+1/4/2024 9:32:19 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:19 PM: Found ID: 3 BZB Customer ID: 342 Payment Amount: 13.45 Memo: asdf a
+1/4/2024 9:32:19 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:19 PM: Found ID: 4 BZB Customer ID: 342 Payment Amount: 1.34 Memo: asdf
+1/4/2024 9:32:19 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:32:19 PM: Found ID: 5 BZB Customer ID: 365 Payment Amount: 150.00 Memo: 
+1/4/2024 9:32:19 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 9:32:19 PM: Found ID: 6 BZB Customer ID: 365 Payment Amount: 1.23 Memo: 
+1/4/2024 9:32:19 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 4:34:12 PM: Checking for payment updates in bzb
+1/4/2024 4:34:12 PM: Found 1 new payment updates to process
+1/4/2024 4:34:12 PM: Payment with QBPayment ID: 2 hasn't been pushed to intuit yet. Please check to make sure a valid Customer Mapping is available. Skipping update....
+1/4/2024 4:34:33 PM: Checking for new companies in bzb
+1/4/2024 4:34:33 PM: Found 1 new companies to process
+1/4/2024 4:34:33 PM: Attempting to add customers to Quick Books
+1/4/2024 4:34:33 PM: Attempting to add company with CompanyID: 1514 to QuickBooks
+1/4/2024 4:34:35 PM: Successfully added company with CompanyID: 1514 to QuickBooks
+1/4/2024 4:35:37 PM: Checking for new payments in bzb
+1/4/2024 4:35:37 PM: Found 6 new payments to process
+1/4/2024 9:35:37 PM: Found ID: 2 BZB Customer ID: 342 Payment Amount: 671.34 Memo: keh
+1/4/2024 9:35:37 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:35:37 PM: Found ID: 3 BZB Customer ID: 342 Payment Amount: 13.45 Memo: asdf a
+1/4/2024 9:35:37 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:35:37 PM: Found ID: 4 BZB Customer ID: 342 Payment Amount: 1.34 Memo: asdf
+1/4/2024 9:35:37 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:35:37 PM: Found ID: 5 BZB Customer ID: 365 Payment Amount: 150.00 Memo: 
+1/4/2024 9:35:37 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 9:35:37 PM: Found ID: 6 BZB Customer ID: 365 Payment Amount: 1.23 Memo: 
+1/4/2024 9:35:37 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 9:35:37 PM: Found ID: 7 BZB Customer ID: 1514 Payment Amount: 75.00 Memo: 
+1/4/2024 9:35:38 PM: Payment with Payment ID: 7 has been successfully pushed to QuickBooks
+1/4/2024 4:36:12 PM: Checking for new payment deletions in bzb
+1/4/2024 4:36:12 PM: No new payment deletions to process
+1/4/2024 4:37:12 PM: Checking for new payments in bzb
+1/4/2024 4:37:12 PM: Found 5 new payments to process
+1/4/2024 9:37:12 PM: Found ID: 2 BZB Customer ID: 342 Payment Amount: 671.34 Memo: keh
+1/4/2024 9:37:12 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:37:12 PM: Found ID: 3 BZB Customer ID: 342 Payment Amount: 13.45 Memo: asdf a
+1/4/2024 9:37:12 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:37:12 PM: Found ID: 4 BZB Customer ID: 342 Payment Amount: 1.34 Memo: asdf
+1/4/2024 9:37:12 PM: Could not find customer mapping for BZB Customer ID: 342. Skipping...
+1/4/2024 9:37:12 PM: Found ID: 5 BZB Customer ID: 365 Payment Amount: 150.00 Memo: 
+1/4/2024 9:37:12 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...
+1/4/2024 9:37:12 PM: Found ID: 6 BZB Customer ID: 365 Payment Amount: 1.23 Memo: 
+1/4/2024 9:37:12 PM: Could not find customer mapping for BZB Customer ID: 365. Skipping...

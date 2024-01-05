@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PofJZ5uIY+PAFCi7MrE4sJmvswbGskIRQyvM+6C995yKW59rn+XsXsINRI7ZNS10x3k7zuhwLxvxi4wKGLtmXw==",
+  "dgSpecHash": "2XLRP+qpfrGKDb8LI2p7TLjogfFpH9kGkhW/n/rAPgCRsyLYDdYsQRfE15g60mP6djYrUf+HC2SkYL628plU2w==",
   "success": true,
-  "projectFilePath": "/Users/taylorfernandez/Desktop/test/aperion-quickbooks-integration/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
+  "projectFilePath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/taylorfernandez/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
     "/Users/taylorfernandez/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

@@ -56,7 +56,7 @@ namespace AperionQB.Infrastructure
                 .AddJob<CheckDBForNewCustomers>(jobBuilder => jobBuilder.WithIdentity(jobKey))
                 .AddTrigger(trigger => trigger
                     .ForJob(jobKey)
-                    .StartAt(DateTimeOffset.Now.AddMinutes(10))
+                    .StartAt(DateTimeOffset.Now.AddMinutes(15))
                     .WithSimpleSchedule(schedule =>
                         schedule.WithIntervalInMinutes(30).RepeatForever()));
         }

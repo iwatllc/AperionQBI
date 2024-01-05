@@ -18,6 +18,11 @@ namespace AperionQB.Infrastructure.QuickBooks
 	    public QuickBooksOperation()
 	    {
             IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
+            if(info.AccessToken == null || info.RefreshToken == null)
+            {
+                info.AccessToken = "adsf";
+                info.RefreshToken = "asdf";
+            }
             validator = new OAuth2RequestValidator((string)info.AccessToken);
             serviceContext = new ServiceContext((string)info.RealmId, IntuitServicesType.QBO, validator);
 
