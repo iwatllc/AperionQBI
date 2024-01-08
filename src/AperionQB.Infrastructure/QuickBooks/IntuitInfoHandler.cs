@@ -29,9 +29,9 @@ namespace AperionQB.Infrastructure.QuickBooks
             try
             {
                 info = getIntuitInfo();
-                info.ClientId = clientID;
-                info.ClientSecret = clientSecret;
-                info.RedirectUrl = callbackURL;
+                if(clientID != null) { info.ClientId = clientID; }
+                if (clientSecret != null) { info.ClientSecret = clientSecret; }
+                if(callbackURL != null){ info.RedirectUrl = callbackURL;}
                 saveIntuitInfo(info);
                 return true;
             }
