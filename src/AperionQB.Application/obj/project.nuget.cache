@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qso75p2HoTVW/nuq1DdlnnoNj+cqauAXFCe4sCoxU0NGnvZNFLSDOajAGRLLXRWLM1T6/gJVh7nEwVbLhXGLXg==",
+  "dgSpecHash": "pn4qrPDigWMAo1HGjyaOYGNg2OrbzSPkiv/rCzudIB0oYypaZKvx0oJpODf4fVvdzd/j38uH49MNq5YHm5eb4Q==",
   "success": true,
-  "projectFilePath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj",
+  "projectFilePath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj",
   "expectedPackageFiles": [
     "/Users/taylorfernandez/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
     "/Users/taylorfernandez/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

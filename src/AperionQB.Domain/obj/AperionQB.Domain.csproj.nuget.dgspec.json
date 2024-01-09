@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {}
+    "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {}
   },
   "projects": {
-    "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+    "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj",
+        "projectUniqueName": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj",
         "projectName": "AperionQB.Domain",
-        "projectPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj",
+        "projectPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj",
         "packagesPath": "/Users/taylorfernandez/.nuget/packages/",
-        "outputPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/obj/",
+        "outputPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/taylorfernandez/.nuget/NuGet/NuGet.Config"

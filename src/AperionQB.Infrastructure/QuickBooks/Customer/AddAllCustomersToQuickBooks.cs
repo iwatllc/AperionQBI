@@ -7,10 +7,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
     public class AddAllCustomerToQuickBooks
     {
         private readonly IApplicationDbContext _context;
+        private readonly IInfoHandler _handler;
         private readonly Logger _logger;
-        public AddAllCustomerToQuickBooks(IApplicationDbContext _context)
+        public AddAllCustomerToQuickBooks(IApplicationDbContext _context, IInfoHandler handler)
         {
             this._context = _context;
+            this._handler = handler;
             _logger = new Logger();
         }
 
@@ -28,7 +30,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                         _logger.log(DateTime.Now + ": Attempting to add company with CompanyID: " + mapping.CompanyID + " to QuickBooks");
                         try
                         {
-                            await new AddCustomer(_context).addCustomer();
+                            await new AddCustomer(_context, _handler).addCustomer();
                         }
                         catch (Exception e)
                         {

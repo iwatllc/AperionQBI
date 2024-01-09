@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using AperionQB.Application.Features.QuickBooks.Commands;
+using AperionQB.Application.Interfaces;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using Intuit.Ipp.QueryFilter;
@@ -10,8 +11,11 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
     {
         private Object l = new object();
 
+        public UpdatePayment(IApplicationDbContext context, IInfoHandler _handler):base(context,_handler){ }
+
         public bool updatePayment(QBPayment payment)
         {
+            
             QueryService<SalesReceipt> qService = new QueryService<SalesReceipt>(serviceContext);
 
 

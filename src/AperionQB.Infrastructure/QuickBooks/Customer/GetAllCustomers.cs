@@ -1,12 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
+using AperionQB.Application.Interfaces;
 
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
     public class GetAllCustomers : QuickBooksOperation
     {
+        public GetAllCustomers(IApplicationDbContext context, IInfoHandler handler): base(context, handler){}
         public void getCustomersFromIntuit()
         {
 

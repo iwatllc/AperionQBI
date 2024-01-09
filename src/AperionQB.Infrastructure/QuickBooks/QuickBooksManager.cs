@@ -2,6 +2,7 @@
 using AperionQB.Application.Interfaces;
 using AperionQB.Infrastructure.QuickBooks.Payments;
 using AperionQB.Infrastructure.QuickBooks.TokenManagement;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace AperionQB.Infrastructure.QuickBooks
 {
@@ -17,19 +18,24 @@ namespace AperionQB.Infrastructure.QuickBooks
         DeletePayment delete;
         GetAllPayments getAllPaymentsFromIntuit;
         UpdatePayment update;
+        private IApplicationDbContext _context;
+        private IInfoHandler _handler;
 
-        public QuickBooksManager()
+        public QuickBooksManager(IApplicationDbContext _context, IInfoHandler _handler)
         {
-            delete = new DeletePayment();
-            getAllPaymentsFromIntuit = new GetAllPayments();
-            update = new UpdatePayment();
-            actions = new QuickBooksKeyActions();
-            url = new GetAuthURL();
-            add = new AddPayment();
-            getcustomers = new GetAllCustomers();
-            getcustomer = new GetCustomer();
-            payment = new GetPayment();
+            this._context = _context;
+            this._handler = _handler;
+            _handler.ensureEntryInDB();
 
+            delete = new DeletePayment(this._context, this._handler);
+            getAllPaymentsFromIntuit = new GetAllPayments(this._context, this._handler);
+            update = new UpdatePayment(this._context, this._handler);
+            actions = new QuickBooksKeyActions(this._context, this._handler);
+            url = new GetAuthURL(this._context, this._handler);
+            add = new AddPayment(this._context, this._handler);
+            getcustomers = new GetAllCustomers(this._context, this._handler);
+            getcustomer = new GetCustomer(this._context, this._handler);
+            payment = new GetPayment(this._context, this._handler);
         }
 
         public string getKeys()
@@ -39,14 +45,14 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         async Task<bool> IQuickBooksManager.getKeysCallback(string code, string realmId)
         {
-            await new GetNewTokens().GetAuthTokensAsync(code, realmId);
+            await new GetNewTokens(_handler).GetAuthTokensAsync(code, realmId);
 
             return true;
         }
 
         public bool updateClientInfo(string clientID, string clientSecret, string callbackURL)
-        {
-            IntuitInfoHandler.updateIntuitInfo(clientID, clientSecret, callbackURL);
+        {        
+            _handler.updateIntuitInfo(clientID, clientSecret, callbackURL);
             return false; 
         }
 

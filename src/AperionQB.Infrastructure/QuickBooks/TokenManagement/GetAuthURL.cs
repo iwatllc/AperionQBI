@@ -1,7 +1,9 @@
 ﻿using System;
+using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.QuickBooks;
 using Intuit.Ipp.OAuth2PlatformClient;
 using Microsoft.Extensions.Options;
+
 
 namespace AperionQB.Infrastructure.QuickBooks.TokenManagement
 {
@@ -9,9 +11,14 @@ namespace AperionQB.Infrastructure.QuickBooks.TokenManagement
 
     {
         QuickBooksKeyActions actions;
-        public GetAuthURL()
+        private readonly IApplicationDbContext _context;
+        private readonly IInfoHandler _handler;
+
+        public GetAuthURL(IApplicationDbContext context, IInfoHandler handler)
         {
-            actions = new QuickBooksKeyActions();
+            _context = context;
+            _handler = handler; 
+            actions = new QuickBooksKeyActions(_context, _handler);
         }
 
 

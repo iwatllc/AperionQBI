@@ -98,7 +98,15 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
     async Task IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken)
     {
         await base.SaveChangesAsync();
+       
     }
+    public override int SaveChanges()
+    {
+        base.SaveChanges();
+        return 0;
+    }
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,11 +1,18 @@
 ﻿using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
+using AperionQB.Application.Interfaces;
+
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
     public class AddPayment : QuickBooksOperation
     {
         private Object l = new Object();
+
+
+
+        public AddPayment(IApplicationDbContext context, IInfoHandler handler) : base(context, handler) { }
+
         /**
          * Example found here: https://github.com/IntuitDeveloper/SampleApp-CRUD-.Net/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs#L264
          */

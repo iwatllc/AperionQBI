@@ -23,7 +23,7 @@ namespace AperionQB.Api.Controllers.Tokens
 			//Console.WriteLine("\n\n\nid: " + clientInfo[0] + "\nsecret: " + clientInfo[1] + "\nurl: " + clientInfo[2] + "\n\n\n");
 			//bool response = true;
 
-			bool response = await _mediator.Send(new UpdateClientInfoCommand(clientInfo[0], clientInfo[1], clientInfo[2]));
+			bool response = await _mediator.Send(new UpdateClientInfoCommand(clientInfo[1], clientInfo[0], clientInfo[2]));
 			if (response)
 			{
 				return Ok("Successfully updated client secret");

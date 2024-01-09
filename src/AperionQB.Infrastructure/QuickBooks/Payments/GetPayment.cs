@@ -2,6 +2,8 @@
 using AperionQB.Application.Features.QuickBooks.Commands;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
+using AperionQB.Application.Interfaces;
+
 /**
  * When testing use id 166
  */
@@ -11,6 +13,9 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
     public class GetPayment : QuickBooksOperation
     {
         private Object l = new Object();
+
+        public GetPayment(IApplicationDbContext context, IInfoHandler handler) : base(context, handler) { }
+   
 
         public QBPayment getPaymentByID(int id)
         {
