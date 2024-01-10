@@ -7419,11 +7419,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
+      "projectUniqueName": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
       "projectName": "AperionQB.Infrastructure",
-      "projectPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
+      "projectPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/AperionQB.Infrastructure.csproj",
       "packagesPath": "/Users/taylorfernandez/.nuget/packages/",
-      "outputPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Infrastructure/obj/",
+      "outputPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/taylorfernandez/.nuget/NuGet/NuGet.Config"
@@ -7439,11 +7439,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj": {
-              "projectPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj"
+            "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj": {
+              "projectPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/AperionQB.Application.csproj"
             },
-            "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {
-              "projectPath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj"
+            "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj": {
+              "projectPath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/AperionQB.Domain.csproj"
             }
           }
         }

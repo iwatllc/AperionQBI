@@ -11,11 +11,13 @@ namespace AperionQB.Infrastructure.QuartsJobs
     {
         private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
+        private readonly IInfoHandler _handler;
 
-        public UpdateAccessTokens(ILogger<UpdateAccessTokens> logger, IApplicationDbContext _context)
+        public UpdateAccessTokens(IInfoHandler _handler, IApplicationDbContext _context)
         {
             _logger = new Logger();
             this._context = _context;
+            this._handler = _handler;
         }
 
         public Task Execute(IJobExecutionContext context)
@@ -24,7 +26,7 @@ namespace AperionQB.Infrastructure.QuartsJobs
             try
             {
                 _logger.log(DateTime.Now + ": About to update access tokens");
-                QuickBooksKeyActions actions = new QuickBooksKeyActions();
+                QuickBooksKeyActions actions = new QuickBooksKeyActions(_context, _handler);
                 bool result = actions.refreshAccessTokens().Result;
                 if (result)
                 {

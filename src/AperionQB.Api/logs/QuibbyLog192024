@@ -1,0 +1,46 @@
+1/9/2024 11:12:52 AM: About to update access tokens
+1/9/2024 11:12:52 AM:One or more errors occurred. (Expected state to be Connected but was Closed.)
+1/9/2024 11:13:52 AM: Checking for new payments in bzb
+1/9/2024 11:13:52 AM: No new payments to process
+1/9/2024 11:15:52 AM: Checking for payment updates in bzb
+1/9/2024 11:15:52 AM: No new payment updates to process
+1/9/2024 11:20:59 AM: About to update access tokens
+1/9/2024 11:21:01 AM: Successfully updated access tokens
+1/9/2024 11:21:59 AM: Checking for new payments in bzb
+1/9/2024 11:21:59 AM: No new payments to process
+1/9/2024 11:35:35 AM: About to update access tokens
+1/9/2024 11:35:35 AM:One or more errors occurred. (Sequence contains no elements)
+1/9/2024 11:36:35 AM: Checking for new payments in bzb
+1/9/2024 11:36:35 AM: No new payments to process
+1/9/2024 12:06:05 PM: About to update access tokens
+1/9/2024 1:04:49 PM: About to update access tokens
+1/9/2024 1:04:50 PM: Successfully updated access tokens
+1/9/2024 1:05:49 PM: Checking for new payments in bzb
+1/9/2024 1:05:49 PM: No new payments to process
+1/9/2024 1:12:58 PM: Checking for new companies in bzb
+1/9/2024 1:12:58 PM: Found 1 new companies to process
+1/9/2024 1:12:58 PM: Attempting to add customers to Quick Books
+1/9/2024 1:12:58 PM: Attempting to add company with CompanyID: 1516 to QuickBooks
+1/9/2024 1:13:00 PM: Successfully added company with CompanyID: 1516 to QuickBooks
+1/9/2024 1:15:58 PM: Checking for new payments in bzb
+1/9/2024 1:15:58 PM: Found 1 new payments to process
+1/9/2024 6:15:58 PM: Found ID: 1 BZB Customer ID: 1516 Payment Amount: 10.00 Memo: bruh
+1/9/2024 6:16:00 PM: Payment with Payment ID: 1 has been successfully pushed to QuickBooks
+1/9/2024 1:16:43 PM: About to update access tokens
+1/9/2024 1:16:44 PM: Successfully updated access tokens
+1/9/2024 1:17:00 PM: Checking for new payments in bzb
+1/9/2024 1:17:01 PM: Found 1 new payments to process
+1/9/2024 6:17:01 PM: Found ID: 2 BZB Customer ID: 1516 Payment Amount: 10.00 Memo: lkdjsga
+1/9/2024 6:17:02 PM: Payment with Payment ID: 2 has been successfully pushed to QuickBooks
+1/9/2024 1:17:30 PM: Checking for payment updates in bzb
+1/9/2024 1:17:30 PM: Found 1 new payment updates to process
+1/9/2024 1:17:30 PM: Updating intuit payment with intuitID: 205
+1/9/2024 1:17:31 PM: Successfully updated payment with intuitID: 205
+1/9/2024 1:17:42 PM: Checking for new payment deletions in bzb
+1/9/2024 1:17:42 PM: Found 2 payment deletions to process
+1/9/2024 1:17:42 PM: About to delete payment with QBPaymentID: 1
+1/9/2024 1:17:43 PM: Successfully deleted payment with QBPaymentID: 1
+1/9/2024 1:17:43 PM: About to delete payment with QBPaymentID: 2
+1/9/2024 1:17:44 PM: Successfully deleted payment with QBPaymentID: 2
+1/9/2024 1:17:44 PM: Checking for new payment deletions in bzb
+1/9/2024 1:17:44 PM: No new payment deletions to process

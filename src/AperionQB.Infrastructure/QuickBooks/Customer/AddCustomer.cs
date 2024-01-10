@@ -8,9 +8,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
     public class AddCustomer : QuickBooksOperation
     {
-        private readonly IApplicationDbContext _context;
         private readonly Logger logger;
-        public AddCustomer(IApplicationDbContext _context) { this._context = _context; logger = new Logger(); }
+        public AddCustomer(IApplicationDbContext _context, IInfoHandler _handler) : base(_context, _handler) {logger = new Logger(); }
 
         /**
          * Example found here: https://github.com/IntuitDeveloper/SampleApp-CRUD-.Net/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs#L264

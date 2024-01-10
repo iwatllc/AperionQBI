@@ -49,4 +49,6 @@ public interface IApplicationDbContext
     public DbSet<Term> Terms { get; }
     
     public Task SaveChangesAsync(CancellationToken cancellationToken = new());
+    public int SaveChanges();
+
 }

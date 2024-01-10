@@ -24,8 +24,9 @@ namespace AperionQB.Infrastructure
                             .UseLazyLoadingProxies());
 
 
-            services.AddSingleton<IQuickBooksManager, QuickBooksManager>();
+            services.AddScoped<IQuickBooksManager, QuickBooksManager>();
             services.AddSingleton<IQuartsJobManager, QuartsJobManager>();
+            services.AddScoped<IInfoHandler, IntuitInfoHandler>();
 
             services.AddQuartz(options =>
             {

@@ -12,10 +12,12 @@ namespace AperionQB.Infrastructure
     {
         private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
-        public CheckDBForNewCustomers(ILogger<CheckDBForNewPayments> logger, IApplicationDbContext _context)
+        private readonly IInfoHandler _handler;
+        public CheckDBForNewCustomers(IInfoHandler _handler, IApplicationDbContext _context)
         {
             _logger = new Logger();
             this._context = _context;
+            this._handler = _handler;
         }
 
 
@@ -28,7 +30,7 @@ namespace AperionQB.Infrastructure
                 if (count > 0)
                 {
                     _logger.log(DateTime.Now + ": Found " + count + " new companies to process");
-                    bool result = await new AddAllCustomerToQuickBooks(_context).addCustomerstoQuickBooks();
+                    bool result = await new AddAllCustomerToQuickBooks(_context, _handler).addCustomerstoQuickBooks();
 
                 }
                 else

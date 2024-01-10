@@ -7,10 +7,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
     public class AddAllPaymentsToQuickBooks
     {
         private readonly IApplicationDbContext _context;
+        private readonly IInfoHandler _handler;
         private readonly Logger _logger;
-        public AddAllPaymentsToQuickBooks(IApplicationDbContext _context)
+        public AddAllPaymentsToQuickBooks(IApplicationDbContext _context, IInfoHandler _handler)
         {
             this._context = _context;
+            this._handler = _handler;
             _logger = new Logger();
         }
 
@@ -18,7 +20,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
         public async Task<bool> addAllPaymentstoQuickBooks()
         {
             var payments = _context.PaymentsToMigrateToIntuit.ToList().Where(((pmnt) => (pmnt.intuitPaymentID == null && pmnt.DeletedBool == false)));
-            AddPayment addPayment = new AddPayment();
+            AddPayment addPayment = new AddPayment(_context, _handler);
             List<int> paymentsIds = new List<int>();
 
             foreach (QBPayments payment in payments)

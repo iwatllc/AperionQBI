@@ -14,10 +14,12 @@ namespace AperionQB.Infrastructure
     {
         private readonly Logger _logger;
         private readonly IApplicationDbContext _context;
-        public CheckDBForPaymentUpdates(ILogger<CheckDBForPaymentUpdates> logger, IApplicationDbContext _context)
+        private readonly IInfoHandler _handler;
+        public CheckDBForPaymentUpdates(IInfoHandler _handler, IApplicationDbContext _context)
         {
             _logger = new Logger();
             this._context = _context;
+            this._handler = _handler;
         }
 
 
@@ -31,7 +33,7 @@ namespace AperionQB.Infrastructure
                 if (count > 0)
                 {
                     _logger.log(DateTime.Now + ": Found " + count + " new payment updates to process");
-                    bool result =  new UpdateAllPaymentsInQuickBooks(_context).UpdateAllPaymentsInQB().Result;
+                    bool result =  new UpdateAllPaymentsInQuickBooks(_context, _handler).UpdateAllPaymentsInQB().Result;
                 }
                 else
                 {

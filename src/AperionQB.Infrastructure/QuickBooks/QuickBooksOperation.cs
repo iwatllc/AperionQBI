@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using AperionQB.Application.Interfaces;
 using AperionQB.Domain.Entities.QuickBooks;
 using Intuit.Ipp.Core;
 using Intuit.Ipp.Data;
@@ -14,14 +15,18 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         public OAuth2RequestValidator? validator { get;  }
         public ServiceContext serviceContext { get;  }
+        public readonly IApplicationDbContext _context;
+        public readonly IInfoHandler _handler;
 
-	    public QuickBooksOperation()
+        public QuickBooksOperation(IApplicationDbContext _context, IInfoHandler _handler)
 	    {
-            IntuitInfo info = IntuitInfoHandler.getIntuitInfo();
+            this._context = _context;
+            IntuitInfo info = _handler.getIntuitInfo();
             if(info.AccessToken == null || info.RefreshToken == null)
             {
                 info.AccessToken = "adsf";
                 info.RefreshToken = "asdf";
+                
             }
             validator = new OAuth2RequestValidator((string)info.AccessToken);
             serviceContext = new ServiceContext((string)info.RealmId, IntuitServicesType.QBO, validator);

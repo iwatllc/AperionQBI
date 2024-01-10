@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ZCDqjgcun0+hd7jdZXhdNFv0jvRUZIpRdTyS9eKaYWHIgVQ//yCLSoQSZiI81TthWydHyAgpY00NmTsIme68g==",
+  "dgSpecHash": "kGMNnfM5oqUDPfTU9uLhchLAhN10V6P9R6hj4Ub3pB9Od+wt7M9Q2E7I4jnZVtAK7otZojyAg7J5JAgQr+ZfZw==",
   "success": true,
-  "projectFilePath": "/Users/taylorfernandez/Desktop/PLEASEWORK/AperionQBI/src/AperionQB.Api/AperionQB.Api.csproj",
+  "projectFilePath": "/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Api/AperionQB.Api.csproj",
   "expectedPackageFiles": [
     "/Users/taylorfernandez/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
     "/Users/taylorfernandez/.nuget/packages/ippdotnetsdkforquickbooksapiv3/14.6.3.6/ippdotnetsdkforquickbooksapiv3.14.6.3.6.nupkg.sha512",

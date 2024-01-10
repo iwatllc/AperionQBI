@@ -9,13 +9,15 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
     public class UpdateAllPaymentsInQuickBooks
     {
         private readonly IApplicationDbContext _context;
+        private readonly IInfoHandler _handler;
         private readonly Logger _logger;
         private Object l = new Object();
 
 
-        public UpdateAllPaymentsInQuickBooks(IApplicationDbContext context)
+        public UpdateAllPaymentsInQuickBooks(IApplicationDbContext context, IInfoHandler handler)
         {
             _context = context;
+            _handler = handler;
             _logger = new Logger();
         }
 
@@ -56,7 +58,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                             throw new Exception("You shouldn't see this as it is not possible to attempt to update a payment without an intuit id");
                         }
-                        QBPayment payment = new GetPayment().getPaymentByID(paymentsToUpdate.ElementAt(i).intuitPaymentID.Value);
+                        QBPayment payment = new GetPayment(_context, _handler).getPaymentByID(paymentsToUpdate.ElementAt(i).intuitPaymentID.Value);
 
                         payment.totalAmount = paymentsToUpdate.ElementAt(0).totalAmount;
                         payment.privateNote = paymentsToUpdate.ElementAt(0).Memo;
@@ -64,7 +66,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                         lock (l)
                         {
-                            result = new UpdatePayment().updatePayment(payment);
+                            result = new UpdatePayment(_context, _handler).updatePayment(payment);
                         }
 
                         if (result)
