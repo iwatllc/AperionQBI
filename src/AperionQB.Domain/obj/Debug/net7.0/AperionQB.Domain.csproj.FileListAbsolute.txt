@@ -49,7 +49,6 @@
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/bin/Debug/net7.0/AperionQB.Domain.deps.json
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/bin/Debug/net7.0/AperionQB.Domain.dll
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/bin/Debug/net7.0/AperionQB.Domain.pdb
-/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.csproj.AssemblyReference.cache
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.GeneratedMSBuildEditorConfig.editorconfig
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.AssemblyInfoInputs.cache
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.AssemblyInfo.cs
@@ -58,3 +57,4 @@
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/refint/AperionQB.Domain.dll
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.pdb
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/ref/AperionQB.Domain.dll
+/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Domain/obj/Debug/net7.0/AperionQB.Domain.sourcelink.json

@@ -16,14 +16,18 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
         }
 
 
-        public QBCustomer getCustomerByID(int id)
+        public string getCustomerByID(int id)
         {
             QueryService<Customer> service = new QueryService<Customer>(serviceContext);
 
 
             ReadOnlyCollection<Customer> customers = service.ExecuteIdsQuery($"select * from Customer where id=\'{id}\'");
-            QBCustomer customer = new QBCustomer(Int32.Parse(customers[0].Id), customers[0].GivenName, customers[0].FamilyName, customers[0].PrimaryEmailAddr.Address, customers[0].BillAddr.Line1, customers[0].BillAddr.City, customers[0].DisplayName);
-            return customer;
+            if(customers.Count() == 0)
+            {
+                return "Not Mapped";
+                 
+            }
+            return customers.ElementAt(0).GivenName;
         }
     }
 }

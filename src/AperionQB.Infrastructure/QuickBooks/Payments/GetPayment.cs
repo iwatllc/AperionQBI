@@ -3,6 +3,7 @@ using AperionQB.Application.Features.QuickBooks.Commands;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
 using AperionQB.Application.Interfaces;
+using Newtonsoft.Json;
 
 /**
  * When testing use id 166
@@ -27,7 +28,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
             {
                 receipt = service.ExecuteIdsQuery($"select * from SalesReceipt where id=\'{id}\'");
             }
-
+            Console.WriteLine(JsonConvert.SerializeObject(receipt));
             QBPayment payment = new QBPayment(Int32.Parse(receipt[0].Id), receipt[0].TotalAmt, receipt[0].PrivateNote, receipt[0].Balance);
             return payment;
         }

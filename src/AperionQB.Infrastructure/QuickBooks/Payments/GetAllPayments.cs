@@ -2,6 +2,7 @@
 using AperionQB.Application.Interfaces;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
+using Newtonsoft.Json;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
@@ -15,6 +16,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
         {
             QueryService<SalesReceipt> service = new QueryService<SalesReceipt>(serviceContext);
             ReadOnlyCollection<SalesReceipt> receipt = service.ExecuteIdsQuery($"select * from SalesReceipt");
+            Console.WriteLine("json: " + JsonConvert.SerializeObject(receipt));
             return true;
         }
     }

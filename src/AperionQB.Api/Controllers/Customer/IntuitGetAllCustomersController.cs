@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AperionQB.Application.Features.QuickBooks.Commands;
+using Newtonsoft.Json;
 
 namespace AperionPSD.Server.Controllers;
 
@@ -18,10 +19,10 @@ public class IntuitGetAllCustomersController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> IntuitGetAllCustomers()
     {
-        bool result = _mediator.Send(new CommandGetCustomers()).Result;
-        if (result)
+        String[][] result = _mediator.Send(new CommandGetCustomers()).Result;
+        if (result != null)
         {
-            return Ok("Got all customers from Intuit");
+            return Ok(JsonConvert.SerializeObject(result));
         }
         else
         {

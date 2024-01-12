@@ -1,7 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿using System.Security.Cryptography.Xml;
+using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using AperionQB.Application.Interfaces;
-
+using AperionQB.Infrastructure.Logging;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
@@ -10,17 +11,25 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
         private Object l = new Object();
 
 
-
-        public AddPayment(IApplicationDbContext context, IInfoHandler handler) : base(context, handler) { }
+        private Logger logger;
+        public AddPayment(IApplicationDbContext context, IInfoHandler handler) : base(context, handler) { logger = new Logger(); }
 
         /**
          * Example found here: https://github.com/IntuitDeveloper/SampleApp-CRUD-.Net/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs#L264
          */
-        public int addPayment(decimal totalAmt, int customerId, string lineItemDescription, string memo)
+        public int addPayment(decimal totalAmt, int customerId, string bzbPaymentTypeID, string memo, string invoiceIdentifier)
         {
+            int intuitID = -1;
             try
             {
-
+                intuitID = _context.QBPaymentTypeMappings.ToList().Where((type) => (type.bzbPaymentTypeID == Int32.Parse(bzbPaymentTypeID))).First().intuitPaymentTypeID.Value;
+            }catch (Exception e)
+            {
+                logger.log(DateTime.Now + ": Failed to find a Payment Type Mapping entry for BzB Payment Type ID " + bzbPaymentTypeID + ".");
+            }
+            try
+            {
+                
                 SalesReceipt salesReceipt = new SalesReceipt();
 
                 salesReceipt.TotalAmt = totalAmt;
@@ -34,7 +43,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 salesReceipt.PrintStatusSpecified = true;
                 salesReceipt.EmailStatus = EmailStatusEnum.NotSet;
                 salesReceipt.EmailStatusSpecified = true;
-
+                salesReceipt.PaymentRefNum = invoiceIdentifier;
+        
                 salesReceipt.Balance = new Decimal(0.00);
                 salesReceipt.BalanceSpecified = true;
 
@@ -45,13 +55,18 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                     name = "Customer.ID",
                     Value = customerId.ToString()
                 }; ;
+                
+                Console.WriteLine("Sending invoice with intuit payment id: " + intuitID.ToString());
 
-
+                if(intuitID != -1)
+                {
+                    salesReceipt.PaymentMethodRef = new ReferenceType { Value = intuitID.ToString()};
+                }
 
                 List<Line> lineList = new List<Line>();
                 Line line = new Line();
                 line.LineNum = "1";
-                line.Description = lineItemDescription;
+                line.Description = memo;
                 line.Amount = totalAmt;
                 line.AmountSpecified = true;
 

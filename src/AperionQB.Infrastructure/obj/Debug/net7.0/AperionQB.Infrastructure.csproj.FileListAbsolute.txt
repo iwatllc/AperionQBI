@@ -97,3 +97,4 @@
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/obj/Debug/net7.0/AperionQB.Infrastructure.csproj.CopyComplete
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/obj/Debug/net7.0/AperionQB.Infrastructure.genruntimeconfig.cache
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/obj/Debug/net7.0/ref/AperionQB.Infrastructure.dll
+/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/obj/Debug/net7.0/AperionQB.Infrastructure.sourcelink.json

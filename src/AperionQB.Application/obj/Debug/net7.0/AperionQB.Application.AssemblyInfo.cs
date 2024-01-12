@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AperionQB.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edad2a1a1917031ba5700bb0e48a40051798a7eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AperionQB.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AperionQB.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

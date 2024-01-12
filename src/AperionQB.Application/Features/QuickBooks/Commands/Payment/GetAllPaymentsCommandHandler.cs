@@ -14,9 +14,9 @@ namespace AperionQB.Application.Features.QuickBooks.Commands.Payment
             _manager = mngr;
 		}
 
-        public Task<bool> Handle(GetAllPaymentsCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(GetAllPaymentsCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return _manager.getAllPayments();
         }
     }
 }

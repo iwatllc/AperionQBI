@@ -27,5 +27,5 @@ public partial class Company
     public int StatusId { get; set; }
 
     
-    public string Website { get; set; } = null!;
+    public string? Website { get; set; } = null!;
 }

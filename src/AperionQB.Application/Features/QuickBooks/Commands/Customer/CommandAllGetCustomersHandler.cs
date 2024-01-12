@@ -4,7 +4,7 @@ using AperionQB.Application.Interfaces;
 
 namespace AperionQB.Application.Features.QuickBooks.Commands
 {
-	public class CommandGetCustomersHandler : ICommandHandler<CommandGetCustomers, bool>
+	public class CommandGetCustomersHandler : ICommandHandler<CommandGetCustomers, string[][]>
 	{
         public IQuickBooksManager _manager;
 		public CommandGetCustomersHandler(IQuickBooksManager mngr)
@@ -12,7 +12,7 @@ namespace AperionQB.Application.Features.QuickBooks.Commands
             _manager = mngr;
 		}
 
-        public async Task<bool> Handle(CommandGetCustomers request, CancellationToken cancellationToken)
+        public async Task<string[][]> Handle(CommandGetCustomers request, CancellationToken cancellationToken)
         {
             return _manager.getAllCustomers();
         }

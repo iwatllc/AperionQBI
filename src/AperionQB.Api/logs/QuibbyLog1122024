@@ -1,0 +1,385 @@
+1/12/2024 8:07:11 AM: About to update access tokens
+1/12/2024 8:07:14 AM: Successfully updated access tokens
+1/12/2024 8:08:12 AM: About to update access tokens
+1/12/2024 8:08:14 AM: Successfully updated access tokens
+1/12/2024 8:08:18 AM: An error occured while getting payment methods: Object reference not set to an instance of an object.
+22/10/1402 AP 08:09:36: About to update access tokens
+22/10/1402 AP 08:09:39: Successfully updated access tokens
+22/10/1402 AP 08:09:47: An error occured while getting payment methods: Object reference not set to an instance of an object.
+22/10/1402 AP 08:11:15: An error occured while getting payment methods: Object reference not set to an instance of an object.
+22/10/1402 AP 08:14:15: About to update access tokens
+22/10/1402 AP 08:14:18: Successfully updated access tokens
+22/10/1402 AP 08:36:04: About to update access tokens
+22/10/1402 AP 08:36:06: Successfully updated access tokens
+1/12/2024 9:17:47 AM: About to update access tokens
+1/12/2024 9:17:50 AM: Successfully updated access tokens
+1/12/2024 9:17:58 AM: An error occured while getting payment methods: BadRequest. Details: QueryParserError: Encountered " <INTEGER> "26 "" at line 1, column 38.
+Was expecting one of:
+    "false" ...
+    "true" ...
+     , 
+1/12/2024 9:21:55 AM: About to update access tokens
+1/12/2024 9:21:57 AM: Successfully updated access tokens
+1/12/2024 9:22:06 AM: An error occured while getting payment method: BadRequest. Details: QueryParserError: Encountered " <INTEGER> "26 "" at line 1, column 38.
+Was expecting one of:
+    "false" ...
+    "true" ...
+     , 
+1/12/2024 9:26:01 AM: About to update access tokens
+1/12/2024 9:26:03 AM: Successfully updated access tokens
+1/12/2024 9:28:57 AM: About to update access tokens
+1/12/2024 9:29:09 AM: About to update access tokens
+1/12/2024 9:29:11 AM: Successfully updated access tokens
+1/12/2024 9:35:08 AM: Checking for new payments in bzb
+1/12/2024 9:35:08 AM: Found 5 new payments to process
+1/12/2024 2:35:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:35:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:35:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:35:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:35:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:35:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:35:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:35:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:35:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:35:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 9:37:08 AM: Checking for payment updates in bzb
+1/12/2024 9:37:08 AM: No new payment updates to process
+1/12/2024 9:38:08 AM: Checking for new payment deletions in bzb
+1/12/2024 9:38:08 AM: No new payment deletions to process
+1/12/2024 9:40:08 AM: Checking for new payments in bzb
+1/12/2024 9:40:08 AM: Found 5 new payments to process
+1/12/2024 2:40:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:40:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:40:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:40:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:40:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:40:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:40:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:40:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:40:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:40:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 9:42:08 AM: Checking for payment updates in bzb
+1/12/2024 9:42:08 AM: No new payment updates to process
+1/12/2024 9:43:08 AM: Checking for new payment deletions in bzb
+1/12/2024 9:43:08 AM: No new payment deletions to process
+1/12/2024 9:44:08 AM: Checking for new companies in bzb
+1/12/2024 9:44:08 AM: No new companies to process
+1/12/2024 9:45:08 AM: Checking for new payments in bzb
+1/12/2024 9:45:08 AM: Found 5 new payments to process
+1/12/2024 2:45:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:45:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:45:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:45:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:45:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:45:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:45:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:45:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:45:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:45:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 9:47:08 AM: Checking for payment updates in bzb
+1/12/2024 9:47:08 AM: No new payment updates to process
+1/12/2024 9:48:08 AM: Checking for new payment deletions in bzb
+1/12/2024 9:48:08 AM: No new payment deletions to process
+1/12/2024 9:48:30 AM: An error occured while getting payment method: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+1/12/2024 9:50:08 AM: Checking for new payments in bzb
+1/12/2024 9:50:08 AM: Found 5 new payments to process
+1/12/2024 2:50:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:50:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:50:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:50:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:50:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:50:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:50:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:50:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:50:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:50:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 9:50:11 AM: An error occured while getting payment method: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+1/12/2024 9:50:48 AM: An error occured while getting payment method: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+1/12/2024 9:51:29 AM: An error occured while getting payment method: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+1/12/2024 9:52:08 AM: Checking for payment updates in bzb
+1/12/2024 9:52:08 AM: No new payment updates to process
+1/12/2024 9:53:08 AM: Checking for new payment deletions in bzb
+1/12/2024 9:53:08 AM: No new payment deletions to process
+1/12/2024 9:55:08 AM: Checking for new payments in bzb
+1/12/2024 9:55:08 AM: Found 5 new payments to process
+1/12/2024 2:55:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:55:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:55:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:55:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:55:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:55:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 9:55:51 AM: Checking for new payments in bzb
+1/12/2024 9:55:51 AM: Found 6 new payments to process
+1/12/2024 2:55:51 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:55:51 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:51 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:55:51 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:51 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:55:51 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:51 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:55:51 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:51 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:55:51 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:55:51 PM: Found ID: 42 BZB Customer ID: 456 Payment Amount: 1.23 Memo: adsf
+1/12/2024 9:55:51 AM: Failed to find a Payment Type Mapping entry for BzB Payment Type ID 1.
+1/12/2024 2:55:52 PM: Payment with Payment ID: 42 has been successfully pushed to QuickBooks
+1/12/2024 9:57:08 AM: Checking for payment updates in bzb
+1/12/2024 9:57:08 AM: No new payment updates to process
+1/12/2024 9:58:08 AM: Checking for new payment deletions in bzb
+1/12/2024 9:58:08 AM: No new payment deletions to process
+1/12/2024 9:59:08 AM: About to update access tokens
+1/12/2024 9:59:10 AM: Successfully updated access tokens
+1/12/2024 9:59:37 AM: Checking for new payments in bzb
+1/12/2024 9:59:37 AM: Found 6 new payments to process
+1/12/2024 2:59:37 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 2:59:37 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:59:37 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 2:59:37 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:59:37 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 2:59:37 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:59:37 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 2:59:37 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:59:37 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 2:59:37 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 2:59:37 PM: Found ID: 43 BZB Customer ID: 456 Payment Amount: 1.23 Memo: adsf
+1/12/2024 9:59:37 AM: Failed to find a Payment Type Mapping entry for BzB Payment Type ID 1.
+1/12/2024 2:59:38 PM: Payment with Payment ID: 43 has been successfully pushed to QuickBooks
+1/12/2024 10:00:08 AM: Checking for new payments in bzb
+1/12/2024 10:00:08 AM: Found 5 new payments to process
+1/12/2024 3:00:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 3:00:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:00:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 3:00:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:00:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 3:00:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:00:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 3:00:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:00:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 3:00:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 10:02:08 AM: Checking for payment updates in bzb
+1/12/2024 10:02:08 AM: No new payment updates to process
+1/12/2024 10:03:08 AM: Checking for new payment deletions in bzb
+1/12/2024 10:03:08 AM: No new payment deletions to process
+1/12/2024 10:05:08 AM: Checking for new payments in bzb
+1/12/2024 10:05:08 AM: Found 5 new payments to process
+1/12/2024 3:05:08 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 3:05:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:05:08 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 3:05:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:05:08 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 3:05:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:05:08 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 3:05:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:05:08 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 3:05:08 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 10:06:20 AM: About to update access tokens
+1/12/2024 10:06:22 AM: Successfully updated access tokens
+1/12/2024 10:06:33 AM: Checking for new payments in bzb
+1/12/2024 10:06:33 AM: Found 6 new payments to process
+1/12/2024 3:06:33 PM: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+1/12/2024 3:06:33 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:06:33 PM: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+1/12/2024 3:06:33 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:06:33 PM: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+1/12/2024 3:06:33 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:06:33 PM: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+1/12/2024 3:06:33 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:06:33 PM: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+1/12/2024 3:06:33 PM: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+1/12/2024 3:06:33 PM: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+1/12/2024 10:06:33 AM: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Sequence contains no elements)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/QuartsJobs/Jobs/Payments/CheckDBForNewPayments.cs:line 35
+22/10/1402 AP 10:09:03: About to update access tokens
+22/10/1402 AP 10:09:08: Successfully updated access tokens
+22/10/1402 AP 10:09:13: Checking for new payments in bzb
+22/10/1402 AP 10:09:13: Found 7 new payments to process
+22/10/1402 AP 15:09:13: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:09:14: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:14: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:09:14: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:14: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:09:14: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:14: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:09:14: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:14: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:09:14: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:14: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+22/10/1402 AP 10:09:15: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Sequence contains no elements)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/QuartsJobs/Jobs/Payments/CheckDBForNewPayments.cs:line 35
+22/10/1402 AP 10:09:27: Checking for new payments in bzb
+22/10/1402 AP 10:09:27: Found 8 new payments to process
+22/10/1402 AP 15:09:27: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:09:27: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:27: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:09:27: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:27: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:09:27: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:27: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:09:27: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:27: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:09:27: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:09:27: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+22/10/1402 AP 10:09:28: An error occured during job execution(CheckDBForNewPayments): One or more errors occurred. (Sequence contains no elements)
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at AperionQB.Infrastructure.CheckDBForNewPayments.Execute(IJobExecutionContext context) in /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Infrastructure/QuartsJobs/Jobs/Payments/CheckDBForNewPayments.cs:line 35
+22/10/1402 AP 10:09:42: Checking for new payments in bzb
+22/10/1402 AP 10:09:42: Found 9 new payments to process
+22/10/1402 AP 15:10:03: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:10:37: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:10:37: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:10:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:10:44: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:10:46: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:10:46: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:10:47: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:10:47: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:10:48: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:10:48: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+22/10/1402 AP 10:14:31: About to update access tokens
+22/10/1402 AP 10:14:35: Successfully updated access tokens
+22/10/1402 AP 10:14:36: Checking for new payments in bzb
+22/10/1402 AP 10:14:36: Found 11 new payments to process
+22/10/1402 AP 15:14:36: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:14:36: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:14:36: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:14:36: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:14:36: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:14:36: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:14:36: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:14:36: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:14:36: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:14:36: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:14:36: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+22/10/1402 AP 10:16:50: About to update access tokens
+22/10/1402 AP 10:16:56: Successfully updated access tokens
+22/10/1402 AP 10:17:08: Checking for new payments in bzb
+22/10/1402 AP 10:17:08: Found 12 new payments to process
+22/10/1402 AP 15:17:08: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:17:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:09: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:17:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:09: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:17:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:09: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:17:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:09: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:17:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:09: Found ID: 44 BZB Customer ID: 456 Payment Amount: 1.22 Memo: asdf
+22/10/1402 AP 15:17:16: Payment with Payment ID: 44 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:16: Found ID: 45 BZB Customer ID: 456 Payment Amount: 1.23 Memo: adfa
+22/10/1402 AP 15:17:17: Payment with Payment ID: 45 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:17: Found ID: 46 BZB Customer ID: 456 Payment Amount: 1.23 Memo: asdf
+22/10/1402 AP 15:17:18: Payment with Payment ID: 46 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:18: Found ID: 47 BZB Customer ID: 456 Payment Amount: 1.23 Memo: asdfadsf
+22/10/1402 AP 15:17:18: Payment with Payment ID: 47 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:18: Found ID: 48 BZB Customer ID: 456 Payment Amount: 124.32 Memo: 123
+22/10/1402 AP 15:17:19: Payment with Payment ID: 48 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:19: Found ID: 49 BZB Customer ID: 456 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:17:20: Payment with Payment ID: 49 has been successfully pushed to QuickBooks
+22/10/1402 AP 15:17:20: Found ID: 50 BZB Customer ID: 456 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:17:21: Payment with Payment ID: 50 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:17:56: Checking for new payments in bzb
+22/10/1402 AP 10:17:56: Found 6 new payments to process
+22/10/1402 AP 15:17:56: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:17:56: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:56: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:17:56: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:56: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:17:56: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:56: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:17:56: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:56: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:17:56: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:17:56: Found ID: 51 BZB Customer ID: 456 Payment Amount: 12.34 Memo: TEST BAD DEBIT
+22/10/1402 AP 15:17:57: Payment with Payment ID: 51 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:19:56: About to update access tokens
+22/10/1402 AP 10:19:59: Successfully updated access tokens
+22/10/1402 AP 10:20:17: Checking for new payments in bzb
+22/10/1402 AP 10:20:17: Found 6 new payments to process
+22/10/1402 AP 15:20:17: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:20:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:20:17: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:20:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:20:17: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:20:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:20:17: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:20:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:20:17: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:20:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:20:17: Found ID: 52 BZB Customer ID: 456 Payment Amount: 12.34 Memo: test bad debit 2
+22/10/1402 AP 15:20:18: Payment with Payment ID: 52 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:24:21: About to update access tokens
+22/10/1402 AP 10:24:24: Successfully updated access tokens
+22/10/1402 AP 10:24:49: Checking for new payments in bzb
+22/10/1402 AP 10:24:49: Found 6 new payments to process
+22/10/1402 AP 15:24:49: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:24:50: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:24:50: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:24:50: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:24:50: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:24:50: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:24:50: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:24:50: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:24:50: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:24:50: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:24:50: Found ID: 53 BZB Customer ID: 456 Payment Amount: 1.23 Memo: 1234
+22/10/1402 AP 10:24:50: Failed to find a Payment Type Mapping entry for BzB Payment Type ID 1.
+22/10/1402 AP 15:24:51: Payment with Payment ID: 53 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:26:36: About to update access tokens
+22/10/1402 AP 10:26:39: Successfully updated access tokens
+22/10/1402 AP 10:26:44: Checking for new payments in bzb
+22/10/1402 AP 10:26:44: Found 6 new payments to process
+22/10/1402 AP 15:26:44: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:26:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:26:44: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:26:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:26:44: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:26:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:26:44: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:26:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:26:44: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:26:44: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:26:44: Found ID: 54 BZB Customer ID: 456 Payment Amount: 1.23 Memo: asdf
+22/10/1402 AP 15:26:46: Payment with Payment ID: 54 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:27:17: Checking for new payments in bzb
+22/10/1402 AP 10:27:17: Found 6 new payments to process
+22/10/1402 AP 15:27:17: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:27:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:27:17: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:27:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:27:17: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:27:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:27:17: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:27:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:27:17: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:27:17: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:27:17: Found ID: 55 BZB Customer ID: 456 Payment Amount: 0.65 Memo: hjkb
+22/10/1402 AP 15:27:18: Payment with Payment ID: 55 has been successfully pushed to QuickBooks
+22/10/1402 AP 10:28:15: Checking for new companies in bzb
+22/10/1402 AP 10:28:15: Found 1 new companies to process
+22/10/1402 AP 10:28:15: Attempting to add customers to Quick Books
+22/10/1402 AP 10:28:15: Attempting to add company with CompanyID: 218 to QuickBooks
+22/10/1402 AP 10:28:16: Successfully added company with CompanyID: 218 to QuickBooks
+22/10/1402 AP 10:29:09: Checking for new payments in bzb
+22/10/1402 AP 10:29:09: Found 6 new payments to process
+22/10/1402 AP 15:29:09: Found ID: 12 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adf
+22/10/1402 AP 15:29:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:29:09: Found ID: 13 BZB Customer ID: 1515 Payment Amount: 998.77 Memo: adsf
+22/10/1402 AP 15:29:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:29:09: Found ID: 14 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: saf
+22/10/1402 AP 15:29:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:29:09: Found ID: 15 BZB Customer ID: 1515 Payment Amount: 1.23 Memo: adsf
+22/10/1402 AP 15:29:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:29:09: Found ID: 16 BZB Customer ID: 1515 Payment Amount: 1.34 Memo: asdf
+22/10/1402 AP 15:29:09: Could not find customer mapping for BZB Customer ID: 1515. Skipping...
+22/10/1402 AP 15:29:09: Found ID: 56 BZB Customer ID: 218 Payment Amount: 1.23 Memo: please work
+22/10/1402 AP 15:29:10: Payment with Payment ID: 56 has been successfully pushed to QuickBooks

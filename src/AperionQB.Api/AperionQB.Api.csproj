@@ -32,10 +32,11 @@
     <None Remove="Controllers\Customer\" />
     <None Remove="Controllers\Payment\" />
     <None Remove="Controllers\Tokens\" />
+    <None Remove="Controllers\PaymentMethod\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\Customer\" />
     <Folder Include="Controllers\Payment\" />
-    <Folder Include="Controllers\Tokens\" />
+    <Folder Include="Controllers\PaymentMethod\" />
   </ItemGroup>
 </Project>

@@ -33,6 +33,7 @@
     <None Remove="QuartsJobs\Jobs\" />
     <None Remove="QuartsJobs\Jobs\Customer\" />
     <None Remove="QuartsJobs\Jobs\Payments\" />
+    <None Remove="QuickBooks\PaymentMethod\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="QuickBooks\TokenManagement\" />
@@ -42,6 +43,7 @@
     <Folder Include="QuartsJobs\Jobs\" />
     <Folder Include="QuartsJobs\Jobs\Customer\" />
     <Folder Include="QuartsJobs\Jobs\Payments\" />
+    <Folder Include="QuickBooks\PaymentMethod\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="QuickBooks\IntuitInfo.json">
