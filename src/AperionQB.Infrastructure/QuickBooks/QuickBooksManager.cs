@@ -1,5 +1,6 @@
 ﻿using AperionQB.Application.Features.QuickBooks.Commands;
 using AperionQB.Application.Interfaces;
+using AperionQB.Infrastructure.QuickBooks.PaymentMethod;
 using AperionQB.Infrastructure.QuickBooks.Payments;
 using AperionQB.Infrastructure.QuickBooks.TokenManagement;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
@@ -18,6 +19,9 @@ namespace AperionQB.Infrastructure.QuickBooks
         DeletePayment delete;
         GetAllPayments getAllPaymentsFromIntuit;
         UpdatePayment update;
+        TestQbConnection connection;
+        GetPaymentMethods getPaymentMethods;
+        GetPaymentMethod method;
         private IApplicationDbContext _context;
         private IInfoHandler _handler;
 
@@ -27,6 +31,9 @@ namespace AperionQB.Infrastructure.QuickBooks
             this._handler = _handler;
             _handler.ensureEntryInDB();
 
+            method = new GetPaymentMethod(_context, _handler);
+            getPaymentMethods = new GetPaymentMethods(_context, _handler);
+            connection = new TestQbConnection(_context, _handler);
             delete = new DeletePayment(this._context, this._handler);
             getAllPaymentsFromIntuit = new GetAllPayments(this._context, this._handler);
             update = new UpdatePayment(this._context, this._handler);
@@ -38,10 +45,21 @@ namespace AperionQB.Infrastructure.QuickBooks
             payment = new GetPayment(this._context, this._handler);
         }
 
+        public string getPaymentMethod(int id)
+        {
+            return method.getPaymentMethod(id);
+        }
+
         public string getKeys()
         {
             return url.getAuthURL();
         }
+
+        public bool testQbConnection(int testCustomerID)
+        {
+            return connection.testConnection(testCustomerID);
+        }
+
 
         async Task<bool> IQuickBooksManager.getKeysCallback(string code, string realmId)
         {
@@ -66,11 +84,16 @@ namespace AperionQB.Infrastructure.QuickBooks
             throw new NotImplementedException();
         }
 
-        public int addPayment(int totalAmt, string lineItemDescription, int customerId, string memo)
+        public string getAllPaymentMethods()
+        {
+            return getPaymentMethods.getPaymentMethods();
+        }
+
+        public int addPayment(int totalAmt, string lineItemDescription, int customerId, string memo, string identifier)
         {
             try
             {
-                return add.addPayment(totalAmt, customerId, lineItemDescription, memo);
+                return add.addPayment(totalAmt, customerId, lineItemDescription, memo, identifier);
             }
             catch (Exception e)
             {
@@ -79,21 +102,20 @@ namespace AperionQB.Infrastructure.QuickBooks
 
         }
 
-        public bool getAllCustomers()
+        public string[][] getAllCustomers()
         {
             try
             {
-                getcustomers.getCustomersFromIntuit();
+                return getcustomers.getCustomersFromIntuit();
             }
             catch (Exception e)
             {
-                return false;
+                return null;
             }
 
-            return true;
         }
 
-        public QBCustomer getCustomer(int id)
+        public string getCustomer(int id)
         {
             return getcustomer.getCustomerByID(id);
         }

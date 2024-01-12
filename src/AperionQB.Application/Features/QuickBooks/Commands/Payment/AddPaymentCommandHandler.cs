@@ -15,7 +15,7 @@ namespace AperionQB.Application.Features.QuickBooks.Commands
         //(int totalAmt, string customerRef, int customerId, string memo
         public async Task<int> Handle(AddPaymentCommand request, CancellationToken cancellationToken)
         {
-            return _manager.addPayment(request.total,request.lineItemDescription, request.custId,request.memo);
+            return _manager.addPayment(request.total,request.lineItemDescription, request.custId,request.memo, request.identifier);
 
         }
     }

@@ -23,14 +23,14 @@ public class IntuitGetCustomerByID : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetCustomerByID([FromQuery] int id)
     {
-        QBCustomer result = await _mediator.Send(new CommandGetCustomer(id));
+        string result = _mediator.Send(new CommandGetCustomer(id)).Result;
         if (result != null)
         {
-            return Ok(JsonConvert.SerializeObject(result));
+            return Ok(result);
         }
         else
         {
-            return BadRequest("Unable to get customers from intuit. Please check logs and fix the issue");
+            return BadRequest("Unable to get customer from intuit. Please check logs and fix the issue");
         }
     }
 }

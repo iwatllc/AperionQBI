@@ -22,13 +22,14 @@
     <None Remove="Features\QuickBooks\Commands\Payment\" />
     <None Remove="Features\QuickBooks\Commands\Customer\" />
     <None Remove="Features\QuickBooks\Commands\Tokens\" />
+    <None Remove="Features\QuickBooks\Commands\PaymentMethod\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Invoices\Commands\" />
     <Folder Include="Features\QuickBooks\" />
-    <Folder Include="Features\QuickBooks\Commands\" />
     <Folder Include="Features\QuickBooks\Commands\Payment\" />
     <Folder Include="Features\QuickBooks\Commands\Customer\" />
     <Folder Include="Features\QuickBooks\Commands\Tokens\" />
+    <Folder Include="Features\QuickBooks\Commands\PaymentMethod\" />
   </ItemGroup>
 </Project>

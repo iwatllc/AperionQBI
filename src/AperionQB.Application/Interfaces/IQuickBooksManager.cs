@@ -9,15 +9,19 @@ namespace AperionQB.Application.Interfaces
 
         public Task<bool> getKeysCallback(string code, string realmId);
 
-        bool getAllCustomers();
+        string[][] getAllCustomers();
 
         bool updateClientInfo(string clientID, string clientSecret, string callbackURL);
 
-        QBCustomer getCustomer(int id);
+        string getCustomer(int id);
 
-        int addPayment(int totalAmt, string customerRef, int customerId, string memo);
+        int addPayment(int totalAmt, string customerRef, int customerId, string memo, string identifier);
 
         bool addInvoice();
+
+        string getPaymentMethod(int id);
+
+        public bool testQbConnection(int testCustomerID);
 
         QBPayment getPayment(int id);
 
@@ -30,5 +34,7 @@ namespace AperionQB.Application.Interfaces
         bool updatePayment(QBPayment payment);
 
         bool getAllPayments();
+
+        string getAllPaymentMethods();
     }
 }

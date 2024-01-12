@@ -73,3 +73,4 @@
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/obj/Debug/net7.0/refint/AperionQB.Application.dll
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/obj/Debug/net7.0/AperionQB.Application.pdb
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/obj/Debug/net7.0/ref/AperionQB.Application.dll
+/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Application/obj/Debug/net7.0/AperionQB.Application.sourcelink.json

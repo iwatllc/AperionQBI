@@ -43,14 +43,20 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 firstName = (company != null && company.Name != null) ? company.Name : "N/A";
                 lastName = "N/A";
 
-                primaryEmailAddress = (comms != null && comms.Value != null) ? comms.Value : "noaddressavailable@gmail.com";
+                string cleanEmail = null;
+                if (comms != null)
+                {
+                    cleanEmail = RemoveWhitespace(comms.Value);
+                }
+
+                primaryEmailAddress = (comms != null && cleanEmail != null) ? cleanEmail : "noaddressavailable@gmail.com";
                 BillAddrL1 = (loc != null && loc.Address1 != null) ? loc.Address1 : "N/A";
                 City = (loc != null && loc.City != null) ? loc.City : "N/A";
                 displayName = firstName + " " + lastName;
             }
             catch (Exception e)
             {
-                logger.log(DateTime.Now + "An error has occured while fetching from the database: " + e.Message);
+                logger.log(DateTime.Now + "An error has occured while fetching from the databased: " + e.Message);
                 return false;
             }
 
@@ -88,6 +94,13 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 return false;
             }
             return false;
+        }
+        
+        public string RemoveWhitespace(string input)
+        {
+            return new string(input.ToCharArray()
+                .Where(c => !Char.IsWhiteSpace(c))
+                .ToArray());
         }
     }
 }

@@ -477,3 +477,4 @@
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Api/obj/Debug/net7.0/AperionQB.Api.pdb
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Api/obj/Debug/net7.0/AperionQB.Api.genruntimeconfig.cache
 /Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Api/obj/Debug/net7.0/ref/AperionQB.Api.dll
+/Users/taylorfernandez/Desktop/AperionQBI/src/AperionQB.Api/obj/Debug/net7.0/AperionQB.Api.sourcelink.json

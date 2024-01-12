@@ -14,6 +14,8 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
 
     public virtual DbSet<ChargeCategory> Chargecategories { get; set; }
 
+    public virtual DbSet<QBPaymentTypeMapping> QBPaymentTypeMappings { get; set; }
+
     public virtual DbSet<ChargeCategoryType> Chargecategorytypes { get; set; }
 
     public virtual DbSet<QBCustomerMapping> BZBQuickBooksCustomerMappings { get; set; }
@@ -1685,6 +1687,21 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.Property(e => e.id).HasColumnName("id");
             entity.Property(e => e.CompanyID).HasColumnName("CompanyID");
             entity.Property(e => e.qbId).HasColumnName("qbId");
+
+        });
+
+        modelBuilder.Entity<QBPaymentTypeMapping>(entity =>
+        {
+            entity.HasKey(e => e.id).HasName("PRIMARY");
+
+            entity
+                .ToTable("QBPaymentTypeMapping")
+                .HasCharSet("utf8mb3")
+                .UseCollation("utf8mb3_general_ci");
+
+            entity.Property(e => e.id).HasColumnName("id");
+            entity.Property(e => e.bzbPaymentTypeID).HasColumnName("bzbPaymentTypeID");
+            entity.Property(e => e.intuitPaymentTypeID).HasColumnName("intuitPaymentTypeID");
 
         });
 

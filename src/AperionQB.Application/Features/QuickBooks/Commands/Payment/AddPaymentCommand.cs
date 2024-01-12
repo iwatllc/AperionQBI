@@ -9,13 +9,14 @@ namespace AperionQB.Application.Features.QuickBooks.Commands
         public string lineItemDescription;
         public int custId;
         public string memo;
-
-		public AddPaymentCommand(int TotalAmt,string lineDesc, int customerID, string PaymentMemo)
+        public string identifier;
+		public AddPaymentCommand(int TotalAmt,string lineDesc, int customerID, string PaymentMemo, string identifier)
         {
 			total = TotalAmt;
 			lineItemDescription = lineDesc;
 			custId = customerID;
 			memo = PaymentMemo;
+			this.identifier = identifier;
         }
 	}
 }

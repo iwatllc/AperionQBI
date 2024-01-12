@@ -40,7 +40,12 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
 
                 if (mapping != null)
                 {
-                    int result = addPayment.addPayment(payment.totalAmount, (int)mapping.qbId, payment.Memo, payment.Memo);
+                    string invoiceIdentifier  = _context.Invoices.ToList().Where((pmnt) => ( pmnt.Id == payment.InvoiceID)).First().Identifier;
+                    
+                    Console.WriteLine("Payment ID: "+ payment.id);
+                    int paymentType = _context.Invoicepayments.ToList().Where((pay) => (pay.Id == payment.InvoicePaymentID)).First().PaymentTypeId;
+                    
+                    int result = addPayment.addPayment(payment.totalAmount, (int)mapping.qbId, paymentType.ToString(), payment.Memo, invoiceIdentifier);
 
                     if (result == -1)
                     {

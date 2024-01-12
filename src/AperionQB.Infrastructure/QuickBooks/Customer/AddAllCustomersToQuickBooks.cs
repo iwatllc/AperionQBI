@@ -27,18 +27,20 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 {
                     foreach (QBCustomerMapping mapping in mappings)
                     {
+                        bool result = false;
                         _logger.log(DateTime.Now + ": Attempting to add company with CompanyID: " + mapping.CompanyID + " to QuickBooks");
                         try
                         {
-                            await new AddCustomer(_context, _handler).addCustomer();
+                            result = await new AddCustomer(_context, _handler).addCustomer();
                         }
                         catch (Exception e)
                         {
                             _logger.log(DateTime.Now + ": Unable to add company with CompanyID: " + mapping.CompanyID + " to Quickbooks: " + e.Message);
                         }
 
-                        _logger.log(DateTime.Now + ": Successfully added company with CompanyID: " + mapping.CompanyID + " to QuickBooks");
-
+                        if(result){
+                            _logger.log(DateTime.Now + ": Successfully added company with CompanyID: " + mapping.CompanyID + " to QuickBooks");
+                        }
                     }
                 }
 

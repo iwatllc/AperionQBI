@@ -22,9 +22,9 @@ namespace AperionQB.Api.Controllers
         //Not Final. Just used for testing
         //TODO remove params from method; change to get all info from table in db
         [HttpGet]
-        public async Task<IActionResult> SendPaymentToIntuit([FromQuery] int totalAmount, string lineDesc, int customerID, string privateNote)
+        public async Task<IActionResult> SendPaymentToIntuit([FromQuery] int totalAmount, string lineDesc, int customerID, string privateNote, string identifier)
         {
-            int result =  _mediator.Send(new AddPaymentCommand(totalAmount, lineDesc, customerID, privateNote)).Result;
+            int result =  _mediator.Send(new AddPaymentCommand(totalAmount, lineDesc, customerID, privateNote, identifier)).Result;
 
             if (result != -1)
             {
