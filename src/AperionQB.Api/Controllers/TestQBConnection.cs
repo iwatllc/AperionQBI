@@ -17,9 +17,9 @@ public class TestQBConnection : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<bool>> TestQbiStatus([FromQuery]string id)
+    public async Task<ActionResult<bool>> TestQbiStatus()
     {
-        var result = _mediator.Send(new CommandTestQbConnection(Int32.Parse(id))).Result;
+        var result = _mediator.Send(new CommandTestQbConnection()).Result;
         if (result)
         {
             return Ok("Successfully connected to QB");

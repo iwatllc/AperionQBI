@@ -13,7 +13,7 @@ public class CommandTestQbConnectionHandler : ICommandHandler<CommandTestQbConne
 
     public async Task<bool> Handle(CommandTestQbConnection request, CancellationToken cancellationToken)
     {
-        return  _manager.testQbConnection(request.id);
+        return  _manager.testQbConnection();
     }
 
 }

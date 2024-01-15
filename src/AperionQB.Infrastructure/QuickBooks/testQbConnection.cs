@@ -15,23 +15,17 @@ public class TestQbConnection : QuickBooksOperation
         this._handler = _handler;
     }
 
-    public bool testConnection(int testCustomerID)
+    public bool testConnection()
     {
         try
         {
-            Console.WriteLine(DateTime.Now +": Testing connection to QB");
-            AddPayment payment = new AddPayment(_context, _handler);
-            int resadd = payment.addPayment(0, testCustomerID, "", "Sample payment to check connection status", "0");
+            GetPaymentMethods methods = new GetPaymentMethods(_context, _handler);
+            string res = methods.getPaymentMethods();
 
-            if (resadd == -1)
+            if (res != null && res != "false")
             {
-                return false;
+                return true;
             }
-
-            DeletePayment delpay = new DeletePayment(_context, _handler);
-            bool resdel = delpay.deletePayment(resadd);
-
-            return resdel;
         }
         catch (Exception e)
         {

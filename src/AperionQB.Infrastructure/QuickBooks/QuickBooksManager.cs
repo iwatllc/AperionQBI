@@ -55,9 +55,9 @@ namespace AperionQB.Infrastructure.QuickBooks
             return url.getAuthURL();
         }
 
-        public bool testQbConnection(int testCustomerID)
+        public bool testQbConnection()
         {
-            return connection.testConnection(testCustomerID);
+            return connection.testConnection();
         }
 
 

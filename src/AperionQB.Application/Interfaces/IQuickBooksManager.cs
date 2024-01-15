@@ -21,7 +21,7 @@ namespace AperionQB.Application.Interfaces
 
         string getPaymentMethod(int id);
 
-        public bool testQbConnection(int testCustomerID);
+        public bool testQbConnection();
 
         QBPayment getPayment(int id);
 
