@@ -55,7 +55,7 @@ namespace AperionQB.Infrastructure.QuartsJobs
                     .AddTrigger(trigger => trigger
                         .ForJob(jobKey)
                         .WithSimpleSchedule(schedule =>
-                            schedule.WithIntervalInMinutes(30).RepeatForever()));
+                            schedule.WithIntervalInMinutes(15).RepeatForever()));
             }
         }
     }
