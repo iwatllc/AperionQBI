@@ -367,6 +367,15 @@ paket-files/
 .idea/
 *.sln.iml
 
+# C sharp object files
+src/AperionQB.Api/obj
+src/AperionQB.Application/obj
+src/AperionQB.Domain/obj
+src/AperionQB.Infrastructure/obj
+
+#AperionQBI logs
+src/AperionQB.Api/logs
+
 # CodeRush personal settings
 .cr/personal
 
@@ -380,7 +389,6 @@ __pycache__/
 
 # Tabs Studio
 *.tss
-
 # Telerik's JustMock configuration file
 *.jmconfig
 
