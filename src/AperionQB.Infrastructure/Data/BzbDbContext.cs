@@ -2,6 +2,7 @@
 using AperionQB.Domain.Entities;
 using AperionQB.Domain.Entities.BZBQB;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace AperionQB.Infrastructure.Data;
 
@@ -14,6 +15,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
 
     public virtual DbSet<ChargeCategory> Chargecategories { get; set; }
 
+    public virtual DbSet<QBMassInvoicePayment> QBMassInvoicePayments { get; set; }
     public virtual DbSet<QBPaymentTypeMapping> QBPaymentTypeMappings { get; set; }
 
     public virtual DbSet<ChargeCategoryType> Chargecategorytypes { get; set; }
@@ -1747,6 +1749,28 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.Property(e => e.datePosted).HasColumnName("datePosted").HasColumnType("datetime");
 
 
+        });
+
+        modelBuilder.Entity<QBMassInvoicePayment>(entity =>
+        {
+            entity.HasKey(e => e.id).HasName("primary");
+
+            entity
+                .ToTable("QBMassInvoicePayments")
+                .HasCharSet("utf8mb3")
+                .UseCollation("utf8mb3_general_ci");
+
+            entity.Property(e => e.id).HasColumnName("id");
+            entity.Property(e => e.massInvoicePaymentID).HasColumnName("massInvoicePaymentId");
+            entity.Property(e => e.BZBCompanyID).HasColumnName("BZBCompanyId");
+            entity.Property(e => e.Memo).HasColumnName("Memo").HasColumnType("Text");
+            entity.Property(e => e.CreatedDate).HasColumnName("CreatedDate").HasColumnType("datetime");
+            entity.Property(e => e.CreatedBy).HasColumnName("CreatedBy").HasColumnType("Text");
+            entity.Property(e => e.DeletedBool).HasColumnName("DeletedBool");
+            entity.Property(e => e.DeletedBy).HasColumnName("DeletedBy").HasColumnType("Text");
+            entity.Property(e => e.DeletedByDate).HasColumnName("DeletedByDate").HasColumnType("datetime");
+            entity.Property(e => e.DeletedByQBIDate).HasColumnName("DeletedByQBIDate").HasColumnType("datetime");
+            entity.Property(e => e.intuitPaymentID).HasColumnName("IntuitPaymentID");
         });
 
         OnModelCreatingPartial(modelBuilder);

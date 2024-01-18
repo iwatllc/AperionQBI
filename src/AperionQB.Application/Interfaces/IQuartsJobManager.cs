@@ -6,5 +6,7 @@
         bool fireUpdatePaymentsJob();
         bool fireDeletePaymentsJob();
         bool fireNewCustomersJob();
+
+        bool fireNewMassInvoicePaymentsJob();
     }
 }
