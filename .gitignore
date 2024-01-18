@@ -367,15 +367,6 @@ paket-files/
 .idea/
 *.sln.iml
 
-# C sharp object files
-src/AperionQB.Api/obj
-src/AperionQB.Application/obj
-src/AperionQB.Domain/obj
-src/AperionQB.Infrastructure/obj
-
-#AperionQBI logs
-src/AperionQB.Api/logs
-
 # CodeRush personal settings
 .cr/personal
 
