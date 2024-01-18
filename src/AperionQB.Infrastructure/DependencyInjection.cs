@@ -48,6 +48,7 @@ namespace AperionQB.Infrastructure
             services.ConfigureOptions<CheckDBForPaymentUpdatesSetup>();
             services.ConfigureOptions<CheckDBForPaymentDeletionsSetup>();
             services.ConfigureOptions<CheckDBForNewCustomersSetup>();
+            services.ConfigureOptions<CheckDBForNewMassInvoicePaymentsSetup>();
 
 
             services.AddQuartzHostedService();
