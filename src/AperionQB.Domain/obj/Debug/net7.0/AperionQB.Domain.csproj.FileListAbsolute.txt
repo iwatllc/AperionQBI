@@ -61,7 +61,6 @@
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\bin\Debug\net7.0\AperionQB.Domain.deps.json
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\bin\Debug\net7.0\AperionQB.Domain.dll
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\bin\Debug\net7.0\AperionQB.Domain.pdb
-C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.csproj.AssemblyReference.cache
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.AssemblyInfoInputs.cache
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.AssemblyInfo.cs
@@ -70,3 +69,4 @@ C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\Aperion
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\refint\AperionQB.Domain.dll
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.pdb
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\ref\AperionQB.Domain.dll
+C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Domain\obj\Debug\net7.0\AperionQB.Domain.sourcelink.json

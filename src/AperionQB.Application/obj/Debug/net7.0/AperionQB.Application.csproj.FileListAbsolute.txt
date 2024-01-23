@@ -89,3 +89,4 @@ C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Application\obj\Debug\net7.0\Ap
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Application\obj\Debug\net7.0\AperionQB.Application.csproj.CoreCompileInputs.cache
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Application\obj\Debug\net7.0\AperionQB.Application.csproj.CopyComplete
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Application\obj\Debug\net7.0\ref\AperionQB.Application.dll
+C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Application\obj\Debug\net7.0\AperionQB.Application.sourcelink.json

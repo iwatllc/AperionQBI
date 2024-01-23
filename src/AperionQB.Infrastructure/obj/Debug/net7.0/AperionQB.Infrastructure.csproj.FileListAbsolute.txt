@@ -118,3 +118,4 @@ C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Infrastructure\obj\Debug\net7.0
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Infrastructure\obj\Debug\net7.0\AperionQB.Infrastructure.pdb
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Infrastructure\obj\Debug\net7.0\AperionQB.Infrastructure.genruntimeconfig.cache
 C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Infrastructure\obj\Debug\net7.0\ref\AperionQB.Infrastructure.dll
+C:\Users\iWuser\Desktop\AperionQBI\src\AperionQB.Infrastructure\obj\Debug\net7.0\AperionQB.Infrastructure.sourcelink.json
