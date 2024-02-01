@@ -27,7 +27,7 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                 return "Not Mapped";
                  
             }
-            return customers.ElementAt(0).GivenName;
+            return customers.ElementAt(0).DisplayName;
         }
     }
 }

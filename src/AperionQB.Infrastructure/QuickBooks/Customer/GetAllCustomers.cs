@@ -35,10 +35,10 @@ namespace AperionQB.Infrastructure.QuickBooks
                 foreach (Customer customer in customers)
                 {
                     List<String> entry = new List<String>();
-                    entry.Add(customer.GivenName);
+                    entry.Add(customer.DisplayName);
                     entry.Add(customer.Id);
                     result.Add(entry);
-                    customerCSV.WriteLine($"{customer.Id},{customer.CompanyName},\"{customer.BillAddr?.Line1} {customer.BillAddr?.City}\",{customer.DisplayName},\"{customer.FamilyName},{customer.GivenName}\", {customer.PrimaryEmailAddr?.Address},");
+                    customerCSV.WriteLine($"{customer.Id},{customer.ContactName},\"{customer.BillAddr?.Line1} {customer.BillAddr?.City}\",{customer.DisplayName},\"{customer.FamilyName},{customer.GivenName}\", {customer.PrimaryEmailAddr?.Address},");
                 }
             }
             customerCSV.Close();

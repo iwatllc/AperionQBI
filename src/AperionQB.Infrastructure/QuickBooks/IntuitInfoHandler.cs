@@ -25,7 +25,6 @@ namespace AperionQB.Infrastructure.QuickBooks
                 {
                     IntuitInfo info = new IntuitInfo();
                     info.RealmId = "4620816365375193410";
-                    info.Env = "Sandbox";
                     Configitem item = new Configitem();
                     item.Code = "intuit_info";
                     item.Value = JsonConvert.SerializeObject(info);
