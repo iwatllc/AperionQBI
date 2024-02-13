@@ -37,7 +37,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="QuickBooks\TokenManagement\" />
-    <Folder Include="QuickBooks\Customer\" />
     <Folder Include="QuickBooks\Payments\" />
     <Folder Include="QuartsJobs\" />
     <Folder Include="QuartsJobs\Jobs\" />

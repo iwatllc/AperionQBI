@@ -10,6 +10,7 @@ public interface IApplicationDbContext
     
     public DbSet<ChargeCategory> Chargecategories { get; }
     public DbSet<QBPaymentTypeMapping> QBPaymentTypeMappings { get; }
+    public DbSet<QBCustomers> QBCustomers { get; }
     public DbSet<QBMassInvoicePayment> QBMassInvoicePayments { get; }
     public DbSet<ChargeCategoryType> Chargecategorytypes { get; }
     public DbSet<QBCustomerMapping> BZBQuickBooksCustomerMappings { get; }
