@@ -14,6 +14,8 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
     }
 
     public virtual DbSet<ChargeCategory> Chargecategories { get; set; }
+    
+    public virtual DbSet<QBCustomers> QBCustomers { get; set; }
 
     public virtual DbSet<QBMassInvoicePayment> QBMassInvoicePayments { get; set; }
     public virtual DbSet<QBPaymentTypeMapping> QBPaymentTypeMappings { get; set; }
@@ -1771,6 +1773,20 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.Property(e => e.DeletedByDate).HasColumnName("DeletedByDate").HasColumnType("datetime");
             entity.Property(e => e.DeletedByQBIDate).HasColumnName("DeletedByQBIDate").HasColumnType("datetime");
             entity.Property(e => e.intuitPaymentID).HasColumnName("IntuitPaymentID");
+        });
+
+        modelBuilder.Entity<QBCustomers>(entity =>
+        {
+            entity.HasKey(e => e.id).HasName("primary");
+            
+            entity
+                .ToTable("QBCustomers")
+                .HasCharSet("utf8mb3")
+                .UseCollation("utf8mb3_general_ci");
+
+            entity.Property(e => e.id).HasColumnName("id");
+            entity.Property(e => e.QBCustomerID).HasColumnName("QBCustomerID");
+            entity.Property(e => e.QBCustomerName).HasColumnName("QBCustomerName").HasColumnType("Text");
         });
 
         OnModelCreatingPartial(modelBuilder);

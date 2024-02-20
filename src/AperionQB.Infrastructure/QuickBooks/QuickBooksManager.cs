@@ -9,19 +9,20 @@ namespace AperionQB.Infrastructure.QuickBooks
 {
     public class QuickBooksManager : IQuickBooksManager
     {
-        QuickBooksKeyActions actions;
-        GetAuthURL url;
-        AddCustomer customer;
-        AddPayment add;
-        GetAllCustomers getcustomers;
-        GetCustomer getcustomer;
-        GetPayment payment;
-        DeletePayment delete;
-        GetAllPayments getAllPaymentsFromIntuit;
-        UpdatePayment update;
-        TestQbConnection connection;
-        GetPaymentMethods getPaymentMethods;
-        GetPaymentMethod method;
+        private QuickBooksKeyActions actions;
+        private GetAuthURL url;
+        private AddCustomer customer;
+        private AddPayment add;
+        private GetAllCustomers getcustomers;
+        private GetCustomer getcustomer;
+        private  GetPayment payment;
+        private DeletePayment delete;
+        private  GetAllPayments getAllPaymentsFromIntuit;
+        private UpdatePayment update;
+        private TestQbConnection connection;
+        private GetPaymentMethods getPaymentMethods;
+        private GetPaymentMethod method;
+        private SaveCustomersToDatabase save;
         private IApplicationDbContext _context;
         private IInfoHandler _handler;
 
@@ -31,9 +32,10 @@ namespace AperionQB.Infrastructure.QuickBooks
             this._handler = _handler;
             _handler.ensureEntryInDB();
 
-            method = new GetPaymentMethod(_context, _handler);
-            getPaymentMethods = new GetPaymentMethods(_context, _handler);
-            connection = new TestQbConnection(_context, _handler);
+            method = new GetPaymentMethod(this._context, this._handler);
+            getPaymentMethods = new GetPaymentMethods(this._context,this._handler);
+            save = new SaveCustomersToDatabase(this._context, this._handler);
+            connection = new TestQbConnection(this._context,this._handler);
             delete = new DeletePayment(this._context, this._handler);
             getAllPaymentsFromIntuit = new GetAllPayments(this._context, this._handler);
             update = new UpdatePayment(this._context, this._handler);
@@ -106,7 +108,11 @@ namespace AperionQB.Infrastructure.QuickBooks
         {
             try
             {
-                return getcustomers.getCustomersFromIntuit();
+                String tmp =  save.saveCustomersToDatabase().Result;
+                String[][] temp = new String[1][];
+                temp[0] = new String[1];
+                temp[0][0] = tmp;
+                return temp;
             }
             catch (Exception e)
             {

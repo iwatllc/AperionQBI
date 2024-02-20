@@ -12,6 +12,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\QuickBooks\" />
-    <Folder Include="Entities\BZBQB\" />
   </ItemGroup>
 </Project>
