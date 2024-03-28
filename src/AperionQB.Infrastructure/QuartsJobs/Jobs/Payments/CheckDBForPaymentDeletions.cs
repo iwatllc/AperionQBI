@@ -61,9 +61,9 @@ namespace AperionQB.Infrastructure
                 .AddJob<CheckDBForPaymentDeletions>(jobBuilder => jobBuilder.WithIdentity(jobKey))
                 .AddTrigger(trigger => trigger
                     .ForJob(jobKey)
-                    .StartAt(DateTimeOffset.Now.AddMinutes(9))
+                    .StartAt(DateTimeOffset.Now.AddMinutes(8))
                     .WithSimpleSchedule(schedule =>
-                        schedule.WithIntervalInMinutes(5).RepeatForever()));
+                        schedule.WithIntervalInMinutes(2).RepeatForever()));
         }
     }
 }

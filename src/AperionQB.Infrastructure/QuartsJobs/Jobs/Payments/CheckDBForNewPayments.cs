@@ -61,7 +61,7 @@ namespace AperionQB.Infrastructure
                     .ForJob(jobKey)
                     .StartAt(DateTimeOffset.Now.AddMinutes(6))
                     .WithSimpleSchedule(schedule =>
-                        schedule.WithIntervalInMinutes(5).RepeatForever()));
+                        schedule.WithIntervalInMinutes(2).RepeatForever()));
         }
     }
 }
