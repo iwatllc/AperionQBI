@@ -1780,7 +1780,7 @@ public partial class BzbDbContext : DbContext, IApplicationDbContext
             entity.HasKey(e => e.id).HasName("primary");
             
             entity
-                .ToTable("QBCustomers")
+                .ToTable("qbcustomers")
                 .HasCharSet("utf8mb3")
                 .UseCollation("utf8mb3_general_ci");
 

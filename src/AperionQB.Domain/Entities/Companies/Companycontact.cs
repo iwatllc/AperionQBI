@@ -15,7 +15,7 @@ public partial class CompanyContact
     public int? LocationId { get; set; }
 
     public DateTime Modified { get; set; }
-    public int Modifiedby { get; set; }
+    public int? Modifiedby { get; set; }
     public int StatusId { get; set; }
     public virtual Contact? Supervisor { get; set; }
     public int? SupervisorId { get; set; }

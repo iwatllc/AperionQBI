@@ -14,7 +14,7 @@ public partial class ChargeCategory
     public int Id { get; set; }
 
     public virtual ICollection<InvoiceCustomItem> InvoiceCustomItems { get; set; } = new List<InvoiceCustomItem>();
-    public DateTime Modified { get; set; }
+    public DateTime? Modified { get; set; }
     public decimal? Rate { get; set; }
     public int StatusId { get; set; }
     public string Summary { get; set; } = null!;
