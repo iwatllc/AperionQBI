@@ -31,7 +31,7 @@ namespace AperionQB.Infrastructure.QuickBooks
             validator = new OAuth2RequestValidator((string)info.AccessToken);
             serviceContext = new ServiceContext((string)info.RealmId, IntuitServicesType.QBO, validator);
 
-            serviceContext.IppConfiguration.BaseUrl.Qbo = "https://quickbooks.api.intuit.com/";
+            serviceContext.IppConfiguration.BaseUrl.Qbo = "https://sandbox-quickbooks.api.intuit.com/";
             serviceContext.IppConfiguration.MinorVersion.Qbo = "23";
         }
 	}

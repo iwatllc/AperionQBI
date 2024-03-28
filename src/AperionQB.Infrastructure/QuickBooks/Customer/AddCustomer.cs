@@ -91,6 +91,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
             catch (Exception e)
             {
                 logger.log(DateTime.Now + ": Unable to add company " + displayName + " to QuickBooks due to: " + e.Message);
+                mapping.qbId = -2;
+                _context.BZBQuickBooksCustomerMappings.Update(mapping);
                 return false;
             }
             return false;
