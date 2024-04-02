@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AperionQB.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d029071fb4ab6fc42ba8e04b339e33a84705a05d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74043d765cb2a0deed7faae7f59fc08297af4ad9")]
 [assembly: System.Reflection.AssemblyProductAttribute("AperionQB.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AperionQB.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
