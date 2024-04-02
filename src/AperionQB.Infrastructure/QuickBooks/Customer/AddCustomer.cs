@@ -37,8 +37,8 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                     return false;
                 }
                 AperionQB.Domain.Entities.Company? company = _context.Companies.Where((company) => company.Id == mapping.CompanyID).FirstOrDefault();
-                AperionQB.Domain.Entities.CompanyCommunication? comms = _context.Companycomms.Where((comms) => (comms.CompanyId == mapping.CompanyID && comms.CommunicationTypeId == 2)).FirstOrDefault();
-                AperionQB.Domain.Entities.CompanyLocation? loc = _context.Companylocs.Where((loc) => loc.CompanyId == mapping.CompanyID).FirstOrDefault();
+                AperionQB.Domain.Entities.CompanyCommunication? comms = null;
+                AperionQB.Domain.Entities.CompanyLocation? loc = null;
 
                 firstName = (company != null && company.Name != null) ? company.Name : "N/A";
                 lastName = "N/A";
@@ -91,6 +91,9 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
             catch (Exception e)
             {
                 logger.log(DateTime.Now + ": Unable to add company " + displayName + " to QuickBooks due to: " + e.Message);
+
+                mapping.qbId = -2;
+                _context.BZBQuickBooksCustomerMappings.Update(mapping);
                 return false;
             }
             return false;

@@ -10,7 +10,7 @@ public partial class Companydocument
     public string DocumentExtension { get; set; } = null!;
     public string DocumentTitle { get; set; } = null!;
     public int Id { get; set; }
-    public DateTime Modified { get; set; }
+    public DateTime? Modified { get; set; }
 
     public int ModifiedBy { get; set; }
 }
