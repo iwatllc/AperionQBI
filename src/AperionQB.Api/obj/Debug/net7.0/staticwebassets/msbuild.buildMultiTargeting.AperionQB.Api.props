@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/AperionQB.Api.props" />
-</Project>
