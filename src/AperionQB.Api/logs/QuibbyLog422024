@@ -1,0 +1,228 @@
+14/01/1403 AP 09:55:54: About to update access tokens
+14/01/1403 AP 09:55:57: Successfully updated access tokens
+14/01/1403 AP 10:01:54: Checking for new payments in bzb
+ments in bzb
+14/01/1403 AP 10:01:54: No new mass invoice payments to process
+14/01/1403 AP 10:01:54: Found 23 new payments to process
+14/01/1403 AP 10:01:54: Found ID: 56 BZB Customer ID: 335 Payment Amount: 417.38 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 57 BZB Customer ID: 335 Payment Amount: 39.75 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 60 BZB Customer ID: 789 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 789. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 61 BZB Customer ID: 557 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 557. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 64 BZB Customer ID: 816 Payment Amount: 25.18 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 816. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 67 BZB Customer ID: 401 Payment Amount: 92.00 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 68 BZB Customer ID: 401 Payment Amount: 80.70 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 172 BZB Customer ID: 408 Payment Amount: 1103.85 Memo: Client did not pay.
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 173 BZB Customer ID: 408 Payment Amount: 1309.10 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 187 BZB Customer ID: 376 Payment Amount: 3690.00 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 376. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 204 BZB Customer ID: 484 Payment Amount: 55.53 Memo: 
+14/01/1403 AP 10:01:54: Could not find customer mapping for BZB Customer ID: 484. Skipping...
+14/01/1403 AP 10:01:54: Found ID: 266 BZB Customer ID: 1525 Payment Amount: 944.14 Memo: 
+14/01/1403 AP 10:02:53: About to update access tokens
+14/01/1403 AP 10:02:57: Successfully updated access tokens
+14/01/1403 AP 10:03:42: An error occured while getting payment methods: Unauthorized-401
+14/01/1403 AP 10:04:18: An error occured while getting payment methods: Unauthorized-401
+14/01/1403 AP 10:04:19: An error occured while getting payment methods: Unauthorized-401
+14/01/1403 AP 10:04:20: An error occured while getting payment methods: Unauthorized-401
+14/01/1403 AP 10:04:21: An error occured while getting payment methods: Unauthorized-401
+14/01/1403 AP 10:07:06: Checking for new payments in bzb
+14/01/1403 AP 10:07:07: Found 23 new payments to process
+14/01/1403 AP 10:07:07: Found ID: 56 BZB Customer ID: 335 Payment Amount: 417.38 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 57 BZB Customer ID: 335 Payment Amount: 39.75 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 60 BZB Customer ID: 789 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 789. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 61 BZB Customer ID: 557 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 557. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 64 BZB Customer ID: 816 Payment Amount: 25.18 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 816. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 67 BZB Customer ID: 401 Payment Amount: 92.00 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 68 BZB Customer ID: 401 Payment Amount: 80.70 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 172 BZB Customer ID: 408 Payment Amount: 1103.85 Memo: Client did not pay.
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 173 BZB Customer ID: 408 Payment Amount: 1309.10 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 187 BZB Customer ID: 376 Payment Amount: 3690.00 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 376. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 204 BZB Customer ID: 484 Payment Amount: 55.53 Memo: 
+14/01/1403 AP 10:07:07: Could not find customer mapping for BZB Customer ID: 484. Skipping...
+14/01/1403 AP 10:07:07: Found ID: 266 BZB Customer ID: 1525 Payment Amount: 944.14 Memo: 
+14/01/1403 AP 10:07:41: Checking for new companies in bzb
+14/01/1403 AP 10:07:41: Found 7 new companies to process
+14/01/1403 AP 10:07:41: Attempting to add customers to Quick Books
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:07:41: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:07:41An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:13: About to update access tokens
+14/01/1403 AP 10:08:17: Successfully updated access tokens
+14/01/1403 AP 10:08:27: Checking for new companies in bzb
+14/01/1403 AP 10:08:27: Found 7 new companies to process
+14/01/1403 AP 10:08:27: Attempting to add customers to Quick Books
+14/01/1403 AP 10:08:27: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:28: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:08:28An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:08:47: Checking for new companies in bzb
+14/01/1403 AP 10:08:47: Found 7 new companies to process
+14/01/1403 AP 10:08:52: Attempting to add customers to Quick Books
+14/01/1403 AP 10:08:59: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:09:05An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:09:46: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:09:56An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:10:09: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:11:27: About to update access tokens
+14/01/1403 AP 10:11:30: Successfully updated access tokens
+14/01/1403 AP 10:11:33: Checking for new companies in bzb
+14/01/1403 AP 10:11:33: Found 7 new companies to process
+14/01/1403 AP 10:11:37: Attempting to add customers to Quick Books
+14/01/1403 AP 10:11:46: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:12:20: About to update access tokens
+14/01/1403 AP 10:12:24: Successfully updated access tokens
+14/01/1403 AP 10:12:32: Checking for new companies in bzb
+14/01/1403 AP 10:12:32: Found 7 new companies to process
+14/01/1403 AP 10:12:40: Attempting to add customers to Quick Books
+14/01/1403 AP 10:13:12: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:22:49: About to update access tokens
+14/01/1403 AP 10:22:52: Successfully updated access tokens
+14/01/1403 AP 10:23:07: Checking for new companies in bzb
+14/01/1403 AP 10:23:07: Found 7 new companies to process
+14/01/1403 AP 10:23:07: Attempting to add customers to Quick Books
+14/01/1403 AP 10:23:07: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:08: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:23:08An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:23:31: About to update access tokens
+14/01/1403 AP 10:23:34: Successfully updated access tokens
+14/01/1403 AP 10:23:37: Checking for new companies in bzb
+14/01/1403 AP 10:23:37: Found 7 new companies to process
+14/01/1403 AP 10:23:46: Attempting to add customers to Quick Books
+14/01/1403 AP 10:23:52: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:29:28: About to update access tokens
+14/01/1403 AP 10:29:31: Successfully updated access tokens
+14/01/1403 AP 10:29:34: Checking for new companies in bzb
+14/01/1403 AP 10:29:34: Found 7 new companies to process
+14/01/1403 AP 10:29:39: Attempting to add customers to Quick Books
+14/01/1403 AP 10:29:45: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:29:48An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:00: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:01: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:01: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:01: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:01: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:30:01: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:30:01An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:21: About to update access tokens
+14/01/1403 AP 10:31:23: Successfully updated access tokens
+14/01/1403 AP 10:31:27: Checking for new companies in bzb
+14/01/1403 AP 10:31:27: Found 7 new companies to process
+14/01/1403 AP 10:31:30: Attempting to add customers to Quick Books
+14/01/1403 AP 10:31:30: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:31:30An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:30: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:31:30An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:30: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:31:30An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:30: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:31:31An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:31: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:31:31An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:31: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:31:31An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:31:31: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:31:31An error has occured while fetching from the databased: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+14/01/1403 AP 10:33:09: About to update access tokens
+14/01/1403 AP 10:33:12: Successfully updated access tokens
+14/01/1403 AP 10:33:19: Checking for new companies in bzb
+14/01/1403 AP 10:33:19: Found 7 new companies to process
+14/01/1403 AP 10:33:21: Attempting to add customers to Quick Books
+14/01/1403 AP 10:33:21: Attempting to add company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:33:22: Successfully added company with CompanyID: 1524 to QuickBooks
+14/01/1403 AP 10:33:22: Attempting to add company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:33:23: Successfully added company with CompanyID: 1525 to QuickBooks
+14/01/1403 AP 10:33:23: Attempting to add company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:33:23: Successfully added company with CompanyID: 1526 to QuickBooks
+14/01/1403 AP 10:33:23: Attempting to add company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:33:24: Successfully added company with CompanyID: 1527 to QuickBooks
+14/01/1403 AP 10:33:24: Attempting to add company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:33:24: Successfully added company with CompanyID: 1528 to QuickBooks
+14/01/1403 AP 10:33:24: Attempting to add company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:33:25: Successfully added company with CompanyID: 1529 to QuickBooks
+14/01/1403 AP 10:33:25: Attempting to add company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:33:25: Successfully added company with CompanyID: 1530 to QuickBooks
+14/01/1403 AP 10:39:09: Checking for new payments in bzb
+ments in bzb
+14/01/1403 AP 10:39:09: No new mass invoice payments to process
+14/01/1403 AP 10:39:09: Found 23 new payments to process
+14/01/1403 AP 10:39:09: Found ID: 56 BZB Customer ID: 335 Payment Amount: 417.38 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 57 BZB Customer ID: 335 Payment Amount: 39.75 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 335. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 60 BZB Customer ID: 789 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 789. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 61 BZB Customer ID: 557 Payment Amount: 19.88 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 557. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 64 BZB Customer ID: 816 Payment Amount: 25.18 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 816. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 67 BZB Customer ID: 401 Payment Amount: 92.00 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 68 BZB Customer ID: 401 Payment Amount: 80.70 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 401. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 172 BZB Customer ID: 408 Payment Amount: 1103.85 Memo: Client did not pay.
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 173 BZB Customer ID: 408 Payment Amount: 1309.10 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 408. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 187 BZB Customer ID: 376 Payment Amount: 3690.00 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 376. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 204 BZB Customer ID: 484 Payment Amount: 55.53 Memo: 
+14/01/1403 AP 10:39:09: Could not find customer mapping for BZB Customer ID: 484. Skipping...
+14/01/1403 AP 10:39:09: Found ID: 266 BZB Customer ID: 1525 Payment Amount: 944.14 Memo: 
+14/01/1403 AP 10:41:09: Checking for payment updates in bzb
+14/01/1403 AP 10:41:09: No new payment updates to process

@@ -3,6 +3,7 @@ using AperionQB.Domain.Entities.BZBQB;
 using AperionQB.Infrastructure.Logging;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
+using MySqlConnector;
 
 namespace AperionQB.Infrastructure.QuickBooks.Payments
 {
@@ -37,8 +38,18 @@ namespace AperionQB.Infrastructure.QuickBooks.Payments
                     return false;
                 }
                 AperionQB.Domain.Entities.Company? company = _context.Companies.Where((company) => company.Id == mapping.CompanyID).FirstOrDefault();
-                AperionQB.Domain.Entities.CompanyCommunication? comms = _context.Companycomms.Where((comms) => (comms.CompanyId == mapping.CompanyID && comms.CommunicationTypeId == 2)).FirstOrDefault();
-                AperionQB.Domain.Entities.CompanyLocation? loc = _context.Companylocs.Where((loc) => loc.CompanyId == mapping.CompanyID).FirstOrDefault();
+
+                AperionQB.Domain.Entities.CompanyCommunication? comms = null;
+                // if (_context.Companycomms.Where((comm) => (comm.CompanyId == mapping.CompanyID && comm.CommunicationTypeId == 2)).FirstOrDefault() != null)
+                // {
+                //    comms = _context.Companycomms.Where((comm) => (comm.CompanyId == mapping.CompanyID && comm.CommunicationTypeId == 2)).FirstOrDefault();
+                // }
+                //
+                AperionQB.Domain.Entities.CompanyLocation? loc = null;
+                // if (_context.Companylocs.Where((location) => location.CompanyId == mapping.CompanyID).FirstOrDefault() != null)
+                // {
+                //     loc = _context.Companylocs.Where((location) => location.CompanyId == mapping.CompanyID).FirstOrDefault();
+                // }
 
                 firstName = (company != null && company.Name != null) ? company.Name : "N/A";
                 lastName = "N/A";
