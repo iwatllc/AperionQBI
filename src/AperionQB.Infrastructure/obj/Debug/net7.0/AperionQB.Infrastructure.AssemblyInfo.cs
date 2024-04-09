@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AperionQB.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74043d765cb2a0deed7faae7f59fc08297af4ad9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec8638a2c3802d60dc4ccc6af65b5d71698fff69")]
 [assembly: System.Reflection.AssemblyProductAttribute("AperionQB.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AperionQB.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
